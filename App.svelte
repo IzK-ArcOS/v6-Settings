@@ -1,9 +1,12 @@
 <script lang="ts">
+  import StateRenderer from "$lib/StateRenderer.svelte";
   import { App } from "$types/app";
   import "./css/main.css";
+  import { Runtime } from "./ts/runtime";
 
   export let app: App;
+  export let runtime: Runtime;
 </script>
 
-<h1>Hello, World!</h1>
-<p>Working! App {app.metadata.name}, version {app.metadata.version}.</p>
+<div class="sidebar">sidebar</div>
+<StateRenderer handler={runtime.state} />
