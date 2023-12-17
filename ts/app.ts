@@ -1,33 +1,34 @@
-import { DefaultIcon } from "$ts/images/apps";
-import { Runtime } from "./runtime";
-import AppSvelte from "../App.svelte";
+import { ArcOSVersion } from "$ts/env";
+import { SettingsIcon } from "$ts/images/apps";
 import { App } from "$types/app";
+import AppSvelte from "../App.svelte";
+import { Runtime } from "./runtime";
 
-export const app: App = {
+export const SettingsApp: App = {
   metadata: {
-    name: "App Template",
-    description: "This is an app template",
+    name: "Settings",
+    description: "Change your ArcOS settings",
     author: "The ArcOS Team",
-    version: "0.0.0",
-    icon: DefaultIcon
+    version: ArcOSVersion,
+    icon: SettingsIcon
   },
   runtime: Runtime,
   content: AppSvelte,
-  id: "appTemplate",
-  size: { w: 0, h: 0 },
-  minSize: { w: 0, h: 0 },
-  maxSize: { w: 0, h: 0 },
-  pos: { x: 0, y: 0 },
+  id: "SettingsApp",
+  size: { w: 730, h: 500 },
+  minSize: { w: 730, h: 500 },
+  maxSize: { w: 1100, h: 600 },
+  pos: { x: 30, y: 40 },
   state: {
     minimized: false,
     maximized: false,
     headless: false,
     fullscreen: false,
-    resizable: false
+    resizable: true
   },
   controls: {
-    minimize: false,
-    maximize: false,
-    close: false
+    minimize: true,
+    maximize: true,
+    close: true
   }
 }
