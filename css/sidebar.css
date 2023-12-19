@@ -1,0 +1,13 @@
+#SettingsApp div.sidebar {
+  padding: 15px;
+}
+
+#SettingsApp button.menu-toggle {
+  background-color: transparent;
+  padding: 0;
+  font-size: 16px;
+}
+
+#SettingsApp.bigtb button.menu-toggle {
+  font-size: 20px;
+}

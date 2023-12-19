@@ -22,7 +22,7 @@ export const SettingsApp: App = {
   state: {
     minimized: false,
     maximized: false,
-    headless: false,
+    headless: true,
     fullscreen: false,
     resizable: true,
   },
@@ -31,4 +31,5 @@ export const SettingsApp: App = {
     maximize: true,
     close: true,
   },
+  glass: true,
 };

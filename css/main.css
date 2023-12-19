@@ -1,4 +1,29 @@
-window#appTemplate {
-  /* Rename appTemplate to the ID of the app */
-  color: #f0f;
+@import url("./sidebar.css");
+
+#SettingsApp div.body {
+  --sidebar-width: 250px;
+  padding: 0;
+  display: flex;
+  height: 100%;
+}
+:root #SettingsApp div.content-wrapper.collapsed,
+:root #SettingsApp div.sidebar.collapsed {
+  --sidebar-width: 60px;
+}
+
+#SettingsApp div.sidebar {
+  width: var(--sidebar-width);
+  height: 100%;
+  border-right: var(--win-border);
+}
+
+#SettingsApp div.content-wrapper {
+  background-color: var(--win-bg);
+  width: calc(100% - var(--sidebar-width));
+}
+
+#SettingsApp div.content-wrapper div.state-renderer {
+  padding: 15px;
+  padding-top: 5px;
+  height: calc(100% - var(--titlebar-height));
 }
