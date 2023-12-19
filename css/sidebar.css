@@ -1,5 +1,70 @@
 #SettingsApp div.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   padding: 15px;
+}
+
+#SettingsApp div.sidebar.collapsed {
+  padding: 10px;
+}
+
+#SettingsApp div.sidebar.collapsed button.page {
+  width: 40px;
+  height: 40px;
+  overflow: visible;
+  gap: 0;
+  justify-content: center;
+}
+
+#SettingsApp div.sidebar.collapsed button.page span.name {
+  display: none;
+}
+
+#SettingsApp div.sidebar button.page {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
+  width: 100%;
+  background-color: transparent;
+  padding: 5px 7px;
+  position: relative;
+  white-space: nowrap;
+  margin: 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  height: 35px;
+  border-radius: 7.5px;
+}
+
+#SettingsApp div.sidebar button.page img {
+  height: 24px;
+}
+
+#SettingsApp div.sidebar button.page.selected {
+  font-weight: bold;
+}
+
+#SettingsApp div.sidebar button.page img.icon {
+  height: 18px;
+  margin-right: 10px;
+}
+
+#SettingsApp div.sidebar button.page span.material-icons-round {
+  margin: 0;
+}
+
+#SettingsApp div.sidebar button.page:hover {
+  background-color: var(--button-glass-bg);
+}
+
+#SettingsApp div.sidebar button.page.selected {
+  background-color: var(--accent-transparent);
+}
+
+#SettingsApp div.sidebar button.page:active {
+  background-color: var(--button-glass-active-bg);
 }
 
 #SettingsApp button.menu-toggle {

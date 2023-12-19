@@ -15,8 +15,8 @@
 </script>
 
 {#if runtime}
-  <SideBar {appdata} />
-  <div class="content-wrapper" class:collapsed={appdata.collapsed}>
+  <SideBar {runtime} {appdata} />
+  <div class="content-wrapper" class:collapsed={!appdata.collapsed}>
     <Titlebar app={runtime.appMutator} {pid} showIcon={false}>
       <MenuToggle {app} {appdata} />
     </Titlebar>

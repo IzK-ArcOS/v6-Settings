@@ -1,5 +1,9 @@
 @import url("./sidebar.css");
 
+#SettingsApp {
+  background-color: var(--glass-blurry);
+}
+
 #SettingsApp div.body {
   --sidebar-width: 250px;
   padding: 0;
@@ -14,7 +18,7 @@
 #SettingsApp div.sidebar {
   width: var(--sidebar-width);
   height: 100%;
-  border-right: var(--win-border);
+  border-right: var(--win-border-light);
 }
 
 #SettingsApp div.content-wrapper {

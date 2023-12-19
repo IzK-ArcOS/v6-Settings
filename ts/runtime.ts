@@ -7,7 +7,7 @@ import { SettingsStore } from "./store";
 import { SettingsOverlays } from "./store/overlays";
 
 export class Runtime extends AppRuntime {
-  state: StateHandler;
+  public state: StateHandler;
   constructor(app: App, mutator: AppMutator, process: Process) {
     super(app, mutator, process);
 
