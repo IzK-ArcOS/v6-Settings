@@ -10,7 +10,7 @@ export const SettingsApp: App = {
     description: "Change your ArcOS settings",
     author: "The ArcOS Team",
     version: ArcOSVersion,
-    icon: SettingsIcon
+    icon: SettingsIcon,
   },
   runtime: Runtime,
   content: AppSvelte,
@@ -24,11 +24,11 @@ export const SettingsApp: App = {
     maximized: false,
     headless: false,
     fullscreen: false,
-    resizable: true
+    resizable: true,
   },
   controls: {
     minimize: true,
     maximize: true,
-    close: true
-  }
-}
+    close: true,
+  },
+};
