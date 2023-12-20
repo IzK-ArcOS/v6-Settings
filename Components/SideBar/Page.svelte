@@ -16,3 +16,6 @@
   <img src={page.image} alt={id} />
   <span class="name">{page.name}</span>
 </button>
+{#if page.attribs.separator}
+  <hr />
+{/if}

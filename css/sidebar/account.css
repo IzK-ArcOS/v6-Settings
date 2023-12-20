@@ -1,0 +1,19 @@
+#SettingsApp div.sidebar button.page.account {
+    height: 40px;
+}
+
+#SettingsApp div.sidebar button.page.account p {
+    line-height: 15px;
+}
+
+#SettingsApp div.sidebar button.page.account p.username {
+    margin: 0;
+    font-weight: bold;
+}
+
+#SettingsApp div.sidebar button.page.account p.server {
+    margin: 0;
+    font-size: 12px;
+    opacity: 0.7;
+    font-weight: normal;
+}

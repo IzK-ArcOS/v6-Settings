@@ -1,7 +1,13 @@
 @import url("./sidebar.css");
+@import url("./titlebar.css");
 
 #SettingsApp {
+  --titlebar-height: 50px;
   background-color: var(--glass-blurry);
+}
+
+#SettingsApp:not(.focused) {
+  background-color: var(--win-bg);
 }
 
 #SettingsApp div.body {
@@ -9,10 +15,6 @@
   padding: 0;
   display: flex;
   height: 100%;
-}
-:root #SettingsApp div.content-wrapper.collapsed,
-:root #SettingsApp div.sidebar.collapsed {
-  --sidebar-width: 60px;
 }
 
 #SettingsApp div.sidebar {

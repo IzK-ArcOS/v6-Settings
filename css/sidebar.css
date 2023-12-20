@@ -1,3 +1,5 @@
+@import url("./sidebar/account.css");
+
 #SettingsApp div.sidebar {
   display: flex;
   flex-direction: column;
@@ -5,26 +7,16 @@
   padding: 15px;
 }
 
-#SettingsApp div.sidebar.collapsed {
-  padding: 10px;
-}
-
-#SettingsApp div.sidebar.collapsed button.page {
-  width: 40px;
-  height: 40px;
-  overflow: visible;
-  gap: 0;
-  justify-content: center;
-}
-
-#SettingsApp div.sidebar.collapsed button.page span.name {
-  display: none;
+#SettingsApp div.sidebar hr {
+  width: 100%;
+  border: var(--win-border-light);
+  margin: 10px 0;
 }
 
 #SettingsApp div.sidebar button.page {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
   text-align: left;
   width: 100%;
   background-color: transparent;
