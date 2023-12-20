@@ -1,7 +1,6 @@
 <script lang="ts">
   import StateRenderer from "$lib/StateRenderer.svelte";
   import Titlebar from "$state/Desktop/Components/ProcessRenderer/Window/Titlebar.svelte";
-  import { ScopedAppData } from "$types/user";
   import { onMount } from "svelte";
   import SideBar from "./Components/SideBar.svelte";
   import "./css/main.css";

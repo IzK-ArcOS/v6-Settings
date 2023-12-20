@@ -32,4 +32,5 @@ export const SettingsApp: App = {
     close: true,
   },
   glass: true,
+  singleInstance: true
 };

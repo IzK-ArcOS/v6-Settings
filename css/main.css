@@ -3,11 +3,6 @@
 
 #SettingsApp {
   --titlebar-height: 50px;
-  background-color: var(--glass-blurry);
-}
-
-#SettingsApp:not(.focused) {
-  background-color: var(--win-bg);
 }
 
 #SettingsApp div.body {

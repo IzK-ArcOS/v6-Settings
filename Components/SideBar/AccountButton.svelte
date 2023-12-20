@@ -24,12 +24,22 @@
 
     page = runtime.state.store.get(PAGE_ID);
   });
+
+  function go() {
+    runtime.state.navigate(PAGE_ID);
+  }
 </script>
 
-<button class="page account" class:selected={current == PAGE_ID}>
-  <ProfilePicture src={pfp} height={30} />
-  <span class="name">
-    <p class="username">{$UserName}</p>
-    <p class="server"><ApiReveal /></p>
-  </span>
-</button>
+{#if page}
+  <button
+    class="page account"
+    class:selected={current == PAGE_ID}
+    on:click={go}
+  >
+    <ProfilePicture src={pfp} height={30} />
+    <span class="name">
+      <p class="username">{$UserName}</p>
+      <p class="server"><ApiReveal /></p>
+    </span>
+  </button>
+{/if}
