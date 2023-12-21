@@ -1,10 +1,9 @@
 <script lang="ts">
   import { States } from "$types/state";
-  import { ScopedAppData } from "$types/user";
   import { onMount } from "svelte";
   import { Runtime } from "../ts/runtime";
-  import Page from "./SideBar/Page.svelte";
   import AccountButton from "./SideBar/AccountButton.svelte";
+  import Page from "./SideBar/Page.svelte";
 
   export let runtime: Runtime;
 

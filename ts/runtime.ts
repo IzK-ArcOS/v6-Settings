@@ -1,4 +1,4 @@
-import { AppRuntime } from "$ts/apps";
+import { AppRuntime } from "$ts/apps/runtime";
 import { spawnOverlay } from "$ts/apps/spawn";
 import { Process } from "$ts/process";
 import { StateHandler } from "$ts/states";

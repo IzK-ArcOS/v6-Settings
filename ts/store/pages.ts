@@ -8,7 +8,7 @@ import Visuals from "$apps/Settings/Components/Page/Visuals.svelte";
 import Wallpaper from "$apps/Settings/Components/Page/Wallpaper.svelte";
 import Windows from "$apps/Settings/Components/Page/Windows.svelte";
 import { Logo } from "$ts/branding";
-import { AccountIcon, AppsIcon, DesktopIcon, MemoryIcon, PasswordIcon, PersonalizationIcon, TaskbarIcon, ThemesIcon, WindowSettingsIcon } from "$ts/images/general";
+import { AccountIcon, AppsIcon, DesktopIcon, PasswordIcon, PersonalizationIcon, TaskbarIcon, ThemesIcon, WindowSettingsIcon } from "$ts/images/general";
 import { States } from "$types/state";
 
 export const SettingsStore: States = new Map([
