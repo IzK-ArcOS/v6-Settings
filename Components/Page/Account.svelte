@@ -1,11 +1,17 @@
 <script lang="ts">
   import { Runtime } from "$apps/Settings/ts/runtime";
+  import ChangeProfilePicture from "./Account/ChangeProfilePicture.svelte";
   import Credentials from "./Account/Credentials.svelte";
   import Profile from "./Account/Profile.svelte";
 
   export let runtime: Runtime;
+  let editing = false;
 </script>
 
-<Profile />
-<Credentials {runtime} />
-<button class="delete">Delete account...</button>
+{#if !editing}
+  <Profile bind:editing />
+  <Credentials {runtime} />
+  <button class="delete">Delete account...</button>
+{:else}
+  <ChangeProfilePicture {runtime} bind:editing />
+{/if}

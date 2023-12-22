@@ -1,3 +1,5 @@
+@import url("./account/changepfp.css");
+
 div.state-SettingsApp-account {
   display: flex;
   flex-direction: column;
@@ -11,6 +13,10 @@ div.state-SettingsApp-account div.pfp-wrapper {
   justify-content: center;
   align-items: center;
   position: relative;
+}
+
+div.state-SettingsApp-account div.pfp-wrapper.editing div.pfprenderer {
+  height: 100px !important;
 }
 
 #SettingsApp div.state-SettingsApp-account div.pfp-wrapper button.edit-button {
@@ -56,14 +62,20 @@ div.state-SettingsApp-account div.credentials div.credential {
   justify-content: space-between;
   align-items: center;
   padding: 10px 15px;
+  padding-right: 10px;
 }
 
 div.state-SettingsApp-account div.credentials div.credential button.edit {
-  border-radius: 50%;
+  border-radius: 7px;
   padding: 0;
   background-color: transparent;
   height: fit-content;
   font-size: 20px;
+  padding: 5px;
+}
+
+div.state-SettingsApp-account div.credentials div.credential button.edit:hover {
+  background-color: var(--button-hover-bg);
 }
 
 div.state-SettingsApp-account div.credentials div.credential + div.credential {

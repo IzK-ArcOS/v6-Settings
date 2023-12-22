@@ -7,6 +7,10 @@
   function changeUsername() {
     runtime.showOverlay("ChangeUsername");
   }
+
+  function changePassword() {
+    runtime.showOverlay("ChangePassword");
+  }
 </script>
 
 <div class="credentials">
@@ -24,6 +28,8 @@
       <p class="caption">Your password</p>
       <p class="value">••••••••••••••••••</p>
     </div>
-    <button class="edit material-icons-round">edit</button>
+    <button class="edit material-icons-round" on:click={changePassword}
+      >edit</button
+    >
   </div>
 </div>

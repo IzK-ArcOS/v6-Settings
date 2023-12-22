@@ -17,6 +17,7 @@
 
 #SettingsApp div.value-changer div.image img {
   height: 48px;
+  aspect-ratio: 1/1;
 }
 
 #SettingsApp div.value-changer div.changer-content {
