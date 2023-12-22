@@ -1,0 +1,81 @@
+div.state-SettingsApp-account {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+div.state-SettingsApp-account div.pfp-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#SettingsApp div.state-SettingsApp-account div.pfp-wrapper button.edit-button {
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  border-radius: 50%;
+  font-size: 20px;
+  border: var(--win-bg) 3px solid;
+  margin: 0;
+  position: absolute;
+  bottom: 1px;
+  right: 1px;
+  background-color: var(--button-bg);
+}
+
+#SettingsApp
+  div.state-SettingsApp-account
+  div.pfp-wrapper
+  button.edit-button:hover {
+  background-color: var(--button-hover-bg);
+}
+
+#SettingsApp
+  div.state-SettingsApp-account
+  div.pfp-wrapper
+  button.edit-button:active {
+  background-color: var(--button-active-bg);
+  opacity: 1;
+}
+
+div.state-SettingsApp-account div.credentials {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background-color: var(--button-bg);
+  width: 300px;
+  border-radius: var(--win-border-rad);
+}
+
+div.state-SettingsApp-account div.credentials div.credential {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+}
+
+div.state-SettingsApp-account div.credentials div.credential button.edit {
+  border-radius: 50%;
+  padding: 0;
+  background-color: transparent;
+  height: fit-content;
+  font-size: 20px;
+}
+
+div.state-SettingsApp-account div.credentials div.credential + div.credential {
+  border-top: var(--win-border);
+}
+
+div.state-SettingsApp-account div.credentials div.credential p {
+  margin: 0;
+}
+
+div.state-SettingsApp-account div.credentials div.credential p.caption {
+  font-weight: bold;
+  opacity: 0.5;
+  margin-bottom: 2px;
+}

@@ -1,5 +1,8 @@
 @import url("./sidebar.css");
 @import url("./titlebar.css");
+@import url("./valuechanger.css");
+@import url("./overlays.css");
+@import url("./page/account.css");
 
 #SettingsApp {
   --titlebar-height: 50px;

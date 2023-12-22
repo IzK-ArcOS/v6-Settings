@@ -1,0 +1,29 @@
+<script lang="ts">
+  import { Runtime } from "$apps/Settings/ts/runtime";
+  import { UserName } from "$ts/stores/user";
+
+  export let runtime: Runtime;
+
+  function changeUsername() {
+    runtime.showOverlay("ChangeUsername");
+  }
+</script>
+
+<div class="credentials">
+  <div class="credential username">
+    <div>
+      <p class="caption">What's your name?</p>
+      <p class="value">{$UserName}</p>
+    </div>
+    <button class="edit material-icons-round" on:click={changeUsername}>
+      edit
+    </button>
+  </div>
+  <div class="credential password">
+    <div>
+      <p class="caption">Your password</p>
+      <p class="value">••••••••••••••••••</p>
+    </div>
+    <button class="edit material-icons-round">edit</button>
+  </div>
+</div>
