@@ -2,6 +2,7 @@
   import { Runtime } from "$apps/Settings/ts/runtime";
   import ChangeProfilePicture from "./Account/ChangeProfilePicture.svelte";
   import Credentials from "./Account/Credentials.svelte";
+  import DeleteButton from "./Account/DeleteButton.svelte";
   import Profile from "./Account/Profile.svelte";
 
   export let runtime: Runtime;
@@ -11,7 +12,7 @@
 {#if !editing}
   <Profile bind:editing />
   <Credentials {runtime} />
-  <button class="delete">Delete account...</button>
+  <DeleteButton {runtime} />
 {:else}
   <ChangeProfilePicture {runtime} bind:editing />
 {/if}
