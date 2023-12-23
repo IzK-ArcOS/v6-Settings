@@ -1,0 +1,54 @@
+#SettingsApp div.state-renderer div.theme-selector {
+  display: grid;
+  grid-template-columns: repeat(5, 70px);
+  gap: 15px;
+}
+
+#SettingsApp div.state-renderer div.theme-selector button.theme-option {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  height: 70px;
+  width: 70px;
+  background-image: var(--bg);
+  background-position: center;
+  background-size: cover;
+  padding: 5px !important;
+  margin: 0 !important;
+}
+
+#SettingsApp
+  div.state-renderer
+  div.theme-selector
+  button.theme-option
+  div.fake-window {
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  background-color: var(--win-bg);
+  border-radius: 5px;
+  position: relative;
+}
+
+#SettingsApp
+  div.state-renderer
+  div.theme-selector
+  button.theme-option
+  div.fake-window.shell-colored::before {
+  z-index: 0 !important;
+}
+
+#SettingsApp
+  div.state-renderer
+  div.theme-selector
+  button.theme-option
+  div.fake-window
+  div.fake-button {
+  width: 20px;
+  height: 5px;
+  background-color: var(--accent);
+  border-radius: 2.5px;
+}

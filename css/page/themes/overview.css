@@ -1,0 +1,62 @@
+#SettingsApp div.theme-overview {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  align-items: center;
+}
+
+#SettingsApp div.theme-overview div.common {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 15px;
+}
+
+#SettingsApp div.theme-overview div.common p {
+  margin: 0;
+}
+
+#SettingsApp div.theme-overview div.common p.name {
+  font-weight: bold;
+}
+
+#SettingsApp div.theme-overview div.common p.value {
+  opacity: 0.5;
+}
+
+#SettingsApp div.theme-overview div.common-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 5px;
+}
+
+#SettingsApp div.theme-overview div.common-option.accent p.value {
+  font-family: "Source Code Pro", monospace;
+}
+
+#SettingsApp div.theme-overview div.common-option.accent div.accent-circle {
+  width: 16px;
+  height: 16px;
+  background-color: var(--accent);
+  border-radius: 50%;
+}
+
+#SettingsApp div.theme-overview div.common-option button.material-icons-round {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  font-size: 16px;
+  border-radius: 50%;
+}
+
+#SettingsApp
+  div.theme-overview
+  div.common-option
+  button.material-icons-round:hover {
+  color: var(--accent-light);
+}
+
+#SettingsApp div.theme-overview button {
+  width: fit-content;
+}

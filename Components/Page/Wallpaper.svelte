@@ -1,0 +1,8 @@
+<script lang="ts">
+  import { Runtime } from "$apps/Settings/ts/runtime";
+  import Overview from "./Wallpaper/Overview.svelte";
+
+  export let runtime: Runtime;
+</script>
+
+<Overview {runtime} />

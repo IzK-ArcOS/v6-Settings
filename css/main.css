@@ -2,13 +2,19 @@
 @import url("./titlebar.css");
 @import url("./valuechanger.css");
 @import url("./overlays.css");
+@import url("./themepreview.css");
 @import url("./page/account.css");
+@import url("./page/themes.css");
 
 #SettingsApp {
   --titlebar-height: 50px;
 }
 
-#SettingsApp div.body {
+#SettingsApp window * {
+  --titlebar-height: 0px;
+}
+
+#SettingsApp > div.body {
   --sidebar-width: 250px;
   padding: 0;
   display: flex;
@@ -33,4 +39,5 @@
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
+  transition: none;
 }

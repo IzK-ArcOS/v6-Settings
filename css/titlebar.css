@@ -1,6 +1,7 @@
 #SettingsApp div.titlebar {
   align-items: start;
   padding-top: 10px;
+  background-color: transparent !important;
 }
 
 #SettingsApp div.titlebar h1 {
