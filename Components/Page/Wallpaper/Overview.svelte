@@ -25,6 +25,10 @@
 
     $UserDataStore.sh.desktop.wallpaper = `@local:${toBase64(path)}`;
   }
+
+  function custom() {
+    runtime.showOverlay("CustomWallpaper");
+  }
 </script>
 
 {#if wallpaper}
@@ -51,7 +55,11 @@
         >
           upload
         </button>
-        <button class="button material-icons-round" title="Wallpaper from URL">
+        <button
+          class="button material-icons-round"
+          title="Wallpaper from URL"
+          on:click={custom}
+        >
           travel_explore
         </button>
       </div>

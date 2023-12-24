@@ -9,7 +9,9 @@
   let wallpaper = "";
 
   onMount(async () => {
-    wallpaper = (await getWallpaper(theme.wallpaper)).url;
+    const data = await getWallpaper(theme.wallpaper);
+
+    wallpaper = data.builtin ? data.thumb : data.url;
   });
 
   function apply() {

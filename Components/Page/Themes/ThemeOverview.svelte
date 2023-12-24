@@ -4,6 +4,7 @@
   import { ThemeCaptions } from "$ts/stores/themes/values";
   import { UserDataStore } from "$ts/stores/user";
   import ThemePreview from "../../ThemePreview.svelte";
+  import AccentColor from "./ThemeOverview/AccentColor.svelte";
 
   export let handler: StateHandler;
   export let runtime: Runtime;
@@ -25,9 +26,7 @@
         <p class="name">Accent</p>
         <p class="value">#{$UserDataStore.sh.desktop.accent}</p>
       </div>
-      <div class="right">
-        <div class="accent-circle" />
-      </div>
+      <AccentColor />
     </div>
     <div class="common-option style">
       <div class="text">
