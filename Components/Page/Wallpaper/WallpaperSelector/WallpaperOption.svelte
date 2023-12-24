@@ -16,5 +16,5 @@
   class:selected={$UserDataStore.sh.desktop.wallpaper === id}
   on:click={select}
 >
-  <img src={wallpaper.url} alt={id} />
+  <img src={wallpaper.thumb} alt={id} />
 </button>
