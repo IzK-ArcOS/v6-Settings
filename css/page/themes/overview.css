@@ -59,4 +59,18 @@
 
 #SettingsApp div.theme-overview button {
   width: fit-content;
+  margin: 0;
+}
+
+#SettingsApp div.theme-overview div.buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#SettingsApp div.theme-overview div.buttons button.material-icons-round {
+  font-size: 20px;
+  padding: 0;
+  width: 28px;
+  height: 28px;
 }

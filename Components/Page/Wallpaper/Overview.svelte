@@ -1,12 +1,12 @@
 <script lang="ts">
   import { Runtime } from "$apps/Settings/ts/runtime";
-  import { DesktopIcon } from "$ts/images/general";
-  import { createErrorDialog } from "$ts/process/error";
+  import { toBase64 } from "$ts/base64";
+  import { createDirectory } from "$ts/server/fs/dir";
+  import { directSingleUpload } from "$ts/server/fs/upload";
   import { UserDataStore } from "$ts/stores/user";
   import { getWallpaper } from "$ts/wallpaper";
   import { Wallpaper } from "$types/wallpaper";
   import ThemePreview from "../../ThemePreview.svelte";
-  import MoreInfo from "./MoreInfo.svelte";
 
   export let runtime: Runtime;
   let wallpaper: Wallpaper;
@@ -15,18 +15,15 @@
     wallpaper = await getWallpaper(v.sh.desktop.wallpaper);
   });
 
-  function moreInfo() {
-    createErrorDialog(
-      {
-        component: MoreInfo,
-        title: "More Information",
-        image: DesktopIcon,
-        buttons: [{ caption: "I see", action() {}, suggested: true }],
-        shrunk: true,
-      },
-      runtime.pid,
-      true
+  async function upload() {
+    await createDirectory("./Wallpapers");
+
+    const path = await directSingleUpload(
+      "./Wallpapers",
+      "image/png, image/jpeg, image/gif, image/svg+xml"
     );
+
+    $UserDataStore.sh.desktop.wallpaper = `@local:${toBase64(path)}`;
   }
 </script>
 
@@ -46,7 +43,18 @@
           <p class="value">{wallpaper.author}</p>
         </div>
       </div>
-      <button on:click={moreInfo}>More info...</button>
+      <div class="buttons">
+        <button
+          class="button material-icons-round"
+          title="Upload a wallpaper"
+          on:click={upload}
+        >
+          upload
+        </button>
+        <button class="button material-icons-round" title="Wallpaper from URL">
+          travel_explore
+        </button>
+      </div>
     </div>
   </div>
 {/if}

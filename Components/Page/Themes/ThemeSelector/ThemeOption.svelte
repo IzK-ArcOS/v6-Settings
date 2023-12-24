@@ -22,10 +22,11 @@
   class:sharp={theme.sharp}
   class:noani={!theme.anim}
   class:noglass={theme.noGlass}
-  style="--accent: #{theme.accent}; --bg: url({wallpaper})"
+  style="--accent: #{theme.accent};"
   on:click={apply}
   title="{theme.name} by {theme.author} (version {theme.version})"
 >
+  <img src={wallpaper} alt={theme.name} />
   <div class="fake-window shell-colored" class:colored={theme.taskbarColored}>
     <div class="fake-button" />
   </div>

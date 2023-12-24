@@ -1,7 +1,10 @@
 @import url("./themes/overview.css");
 @import url("./themes/selector.css");
 
-#SettingsApp div.content-wrapper div.state-renderer.state-SettingsApp-themes {
+#SettingsApp div.content-wrapper div.state-renderer.state-SettingsApp-themes,
+#SettingsApp
+  div.content-wrapper
+  div.state-renderer.state-SettingsApp-wallpaper {
   display: flex;
   flex-direction: column;
   padding: 5px 15px 15px;
