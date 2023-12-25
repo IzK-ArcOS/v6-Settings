@@ -2,6 +2,7 @@
 @import url("./themes/selector.css");
 
 #SettingsApp div.content-wrapper div.state-renderer.state-SettingsApp-themes,
+#SettingsApp div.content-wrapper div.state-renderer.state-SettingsApp-login,
 #SettingsApp
   div.content-wrapper
   div.state-renderer.state-SettingsApp-wallpaper {
