@@ -1,0 +1,9 @@
+div.state-SettingsApp-visuals {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+div.state-SettingsApp-visuals > * {
+  width: 100%;
+}

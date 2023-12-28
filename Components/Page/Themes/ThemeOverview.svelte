@@ -4,6 +4,7 @@
   import { ThemeCaptions } from "$ts/stores/themes/values";
   import { UserDataStore } from "$ts/stores/user";
   import ThemePreview from "../../ThemePreview.svelte";
+  import Desktop from "../../ThemePreview/Desktop.svelte";
   import AccentColor from "./ThemeOverview/AccentColor.svelte";
 
   export let handler: StateHandler;
@@ -19,7 +20,7 @@
 </script>
 
 <div class="theme-overview">
-  <ThemePreview />
+  <ThemePreview><Desktop /></ThemePreview>
   <div class="common">
     <div class="common-option accent">
       <div class="text">

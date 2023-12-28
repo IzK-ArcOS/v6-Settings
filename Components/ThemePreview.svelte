@@ -3,11 +3,17 @@
   import { getWallpaper } from "$ts/wallpaper";
 
   export let noDecorations = false;
+  export let isLogin = false;
 
   let wallpaper = "";
 
   UserDataStore.subscribe(async (v) => {
-    wallpaper = (await getWallpaper(v.sh.desktop.wallpaper)).url;
+    wallpaper = (
+      await getWallpaper(
+        isLogin ? v.acc.loginBackground : v.sh.desktop.wallpaper,
+        isLogin ? "img15" : "img04"
+      )
+    ).url;
   });
 </script>
 
@@ -19,11 +25,6 @@
   style="--bg: url({wallpaper});"
 >
   {#if !noDecorations}
-    <div class="fake-window">
-      <div class="fake-header" />
-      <div class="fake-text" />
-      <div class="fake-button" />
-    </div>
-    <div class="fake-taskbar" />
+    <slot />
   {/if}
 </div>

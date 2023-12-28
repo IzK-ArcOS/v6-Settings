@@ -3,8 +3,10 @@
 @import url("./valuechanger.css");
 @import url("./overlays.css");
 @import url("./themepreview.css");
+@import url("./option.css");
 @import url("./page/account.css");
 @import url("./page/themes.css");
+@import url("./page/visuals.css");
 
 #SettingsApp {
   --titlebar-height: 50px;
@@ -33,7 +35,7 @@
 }
 
 #SettingsApp div.content-wrapper div.state-renderer {
-  padding: 15px;
+  padding: 20px;
   padding-top: 5px;
   height: calc(100% - var(--titlebar-height));
   width: 100%;
@@ -41,4 +43,7 @@
   margin: 0 auto;
   transition: none;
   overflow: auto;
+}
+#SettingsApp div.state-renderer hr {
+  border: var(--button-hover-bg) 1px solid;
 }

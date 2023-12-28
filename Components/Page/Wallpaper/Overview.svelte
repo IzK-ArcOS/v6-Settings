@@ -7,6 +7,7 @@
   import { getWallpaper } from "$ts/wallpaper";
   import { Wallpaper } from "$types/wallpaper";
   import ThemePreview from "../../ThemePreview.svelte";
+  import Desktop from "../../ThemePreview/Desktop.svelte";
 
   export let runtime: Runtime;
   let wallpaper: Wallpaper;
@@ -33,7 +34,7 @@
 
 {#if wallpaper}
   <div class="theme-overview">
-    <ThemePreview />
+    <ThemePreview><Desktop /></ThemePreview>
     <div class="common">
       <div class="common-option">
         <div class="text">

@@ -54,8 +54,8 @@
   confirm={apply}
   disabled={!valid}
 >
-  <h3>Custom Wallpaper</h3>
-  <p>Enter the URL to any wallpaper you like:</p>
+  <h3>Custom Login Background</h3>
+  <p>Enter the URL to any image you like:</p>
   <input
     type="url"
     bind:value={background}
