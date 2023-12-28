@@ -1,0 +1,14 @@
+div.state-SettingsApp-apps div.bottom {
+  border-top: var(--win-border);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+}
+
+div.state-SettingsApp-apps div.bottom div.right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

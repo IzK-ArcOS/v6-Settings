@@ -2,6 +2,7 @@
   display: flex;
   max-width: 610px;
   margin: 0 auto;
+  align-items: center;
 }
 
 #SettingsApp div.settings-option h3.header {
@@ -16,10 +17,6 @@
 #SettingsApp div.settings-option div.option-input {
   margin: 0;
   margin-left: auto;
-}
-
-#SettingsApp div.settings-option div.option-input input.switch {
-  margin: 9px 0;
 }
 
 #SettingsApp div.settings-option div.option-input select {

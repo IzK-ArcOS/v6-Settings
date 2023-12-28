@@ -7,6 +7,9 @@
 @import url("./page/account.css");
 @import url("./page/themes.css");
 @import url("./page/visuals.css");
+@import url("./page/shell.css");
+@import url("./page/windows.css");
+@import url("./page/apps.css");
 
 #SettingsApp {
   --titlebar-height: 50px;
