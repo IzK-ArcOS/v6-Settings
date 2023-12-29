@@ -5,22 +5,23 @@
   import SideBar from "./Components/SideBar.svelte";
   import "./css/main.css";
   import { Runtime } from "./ts/runtime";
+  import { State } from "$types/state";
 
   export let pid: number;
   export let runtime: Runtime;
 
-  let stateName = "";
+  let state: State;
 
   onMount(() => {
-    runtime.state.current.subscribe((v) => (stateName = v.name));
+    runtime.state.current.subscribe((v) => (state = v));
   });
 </script>
 
-{#if runtime}
+{#if runtime && state}
   <SideBar {runtime} />
-  <div class="content-wrapper">
+  <div class="content-wrapper settings-page-{state.key}">
     <Titlebar app={runtime.appMutator} {pid} showIcon={false} showTitle={false}>
-      <h1 class="page-title">{stateName}</h1>
+      <h1 class="page-title">{state.name}</h1>
     </Titlebar>
     <StateRenderer handler={runtime.state} {runtime} />
   </div>

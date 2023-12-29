@@ -1,0 +1,60 @@
+#SettingsApp div.settings-page-about h1.page-title {
+  display: none;
+}
+
+#SettingsApp div.settings-page-about {
+  background: linear-gradient(to bottom, #000 0%, var(--accent-darkest) 100%);
+}
+
+#SettingsApp div.state-SettingsApp-about {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px 0;
+  color: #ccc;
+  animation: appear 0.5s 0.5s forwards !important;
+  padding-top: 30px;
+  opacity: 0;
+  scale: 0.9;
+}
+
+#SettingsApp div.state-SettingsApp-about img {
+  height: 150px;
+}
+
+#SettingsApp div.state-SettingsApp-about h1 {
+  font-size: 32px;
+  margin: 5px 0;
+}
+
+#SettingsApp div.state-SettingsApp-about h1 span.colored {
+  color: #a876ff;
+}
+
+#SettingsApp div.state-SettingsApp-about p {
+  width: 360px;
+  text-align: center;
+  margin: 0;
+  margin-top: 35px;
+}
+
+#SettingsApp div.state-SettingsApp-about p.version {
+  margin-top: auto;
+  font-family: "Source Code Pro";
+  opacity: 0.4;
+  font-size: 12px;
+}
+
+@keyframes appear {
+  0% {
+    padding-top: 40px;
+    opacity: 0;
+    scale: 0.95;
+  }
+
+  to {
+    padding-top: 0;
+    opacity: 1;
+    scale: 1;
+  }
+}
