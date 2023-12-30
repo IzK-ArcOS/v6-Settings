@@ -1,3 +1,4 @@
+import { AppInfo } from "$apps/AppInfo/ts/app";
 import { App } from "$types/app";
 import { ChangePassword } from "../overlays/changePassword";
 import { ChangeUsername } from "../overlays/changeUsername";
@@ -12,5 +13,6 @@ export const SettingsOverlays: Record<string, App> = {
   CustomProfilePicture,
   SaveTheme,
   CustomWallpaper,
-  CustomLoginBackground
+  CustomLoginBackground,
+  AppInfo
 }

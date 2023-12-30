@@ -17,7 +17,7 @@
   });
 
   function showDetails() {
-    runtime.showOverlay("AppDetails", [id]);
+    runtime.showOverlay("AppInfo", [id]);
   }
 </script>
 
