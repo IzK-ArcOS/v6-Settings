@@ -33,13 +33,15 @@
       <div class="text">
         <p class="name">Visual Style</p>
         <p class="value">
-          {ThemeCaptions[$UserDataStore.sh.desktop.theme] || "Invalid"}
+          <select class="flat" bind:value={$UserDataStore.sh.desktop.theme}>
+            <option value="dark">Darkmode</option>
+            <option value="light">Lightmode</option>
+            <option value="amoled">Amoled</option>
+            <option value="amber">Amber Monochrome</option>
+            <option value="scifi">Science Fiction</option>
+            <option value="hc">High contrast</option>
+          </select>
         </p>
-      </div>
-      <div class="right">
-        <button class="material-icons-round edit" on:click={changeStyle}
-          >launch</button
-        >
       </div>
     </div>
     <button class="save-theme" on:click={saveTheme}>Save Theme...</button>

@@ -11,3 +11,21 @@
   padding: 5px 15px 15px;
   gap: 20px;
 }
+
+div.state-SettingsApp-themes div.theme-overview select {
+  margin: 0 -5px !important;
+  width: 100%;
+  background-color: var(--win-bg) !important;
+  color: var(--fg) !important;
+}
+
+div.state-SettingsApp-themes
+  div.theme-overview
+  div.common-option.style
+  div.text {
+  flex-grow: 1;
+}
+
+div.state-SettingsApp-themes div.theme-overview div.common-option.style {
+  padding-right: 0 !important;
+}
