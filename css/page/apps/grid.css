@@ -1,0 +1,45 @@
+div.state-SettingsApp-apps div.apps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 134px);
+  grid-template-rows: repeat(auto-fit, 42px);
+  gap: 10px 9px;
+  padding: 0 20px;
+  height: calc(100% - 70px - 50px);
+  overflow-y: scroll;
+}
+
+div.state-SettingsApp-apps div.apps-grid button {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  padding: 5px;
+  gap: 5px;
+  overflow: hidden;
+  height: 42px;
+}
+
+div.state-SettingsApp-apps div.apps-grid button p.name {
+  font-weight: bold;
+}
+
+div.state-SettingsApp-apps div.apps-grid button p.author {
+  opacity: 0.5;
+  font-size: 10px;
+}
+
+div.state-SettingsApp-apps div.apps-grid button img {
+  height: 32px;
+}
+
+div.state-SettingsApp-apps div.apps-grid button p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin: 0;
+  width: 100%;
+}
+
+div.state-SettingsApp-apps div.apps-grid button div {
+  width: calc(100% - 40px);
+}

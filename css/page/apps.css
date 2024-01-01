@@ -1,0 +1,8 @@
+@import url("./apps/filter.css");
+@import url("./apps/grid.css");
+@import url("./apps/bottom.css");
+
+div.state-SettingsApp-apps {
+  padding: 0 !important;
+  overflow: hidden !important;
+}

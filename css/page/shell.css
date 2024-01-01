@@ -1,0 +1,9 @@
+div.state-SettingsApp-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+div.state-SettingsApp-shell > * {
+  width: 100%;
+}

@@ -1,0 +1,51 @@
+div.state-SettingsApp-apps div.filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 70px;
+  padding: 20px;
+}
+
+div.state-SettingsApp-apps div.filter div.sep {
+  height: 20px;
+  width: 1px;
+  background-color: var(--button-hover-bg);
+}
+
+div.state-SettingsApp-apps div.filter div.view-modes {
+  display: flex;
+  gap: 5px;
+}
+
+div.state-SettingsApp-apps div.filter div.view-modes button {
+  margin: 0;
+  padding: 0 10px;
+  height: 30px;
+}
+
+div.state-SettingsApp-apps div.filter div.view-modes button.selected {
+  background-color: var(--accent);
+  color: var(--accent-darkest);
+}
+
+div.state-SettingsApp-apps div.filter div.search-field {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px;
+  background-color: var(--button-bg);
+  height: 30px;
+  border-radius: 6px;
+  flex-grow: 1;
+}
+
+div.state-SettingsApp-apps div.filter div.search-field input {
+  padding: 0;
+  border: none;
+  flex-grow: 1;
+  box-shadow: none;
+}
+
+div.state-SettingsApp-apps div.filter div.search-field span.icon {
+  font-size: 16px;
+}

@@ -1,0 +1,1 @@
+export type AppsViewMode = "all" | "builtin" | "sideloaded";

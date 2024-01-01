@@ -3,6 +3,7 @@
   import { ProcessStack } from "$ts/stores/process";
   import { saveCurrentTheme } from "$ts/themes";
   import ThemePreview from "../ThemePreview.svelte";
+  import Desktop from "../ThemePreview/Desktop.svelte";
 
   export let runtime: OverlayRuntime;
 
@@ -19,7 +20,7 @@
   }
 </script>
 
-<ThemePreview />
+<ThemePreview><Desktop /></ThemePreview>
 <div class="header">
   <h2>Save Theme</h2>
   <p>What a nice theme! Enter a fitting name for it:</p>

@@ -1,0 +1,9 @@
+div.state-SettingsApp-windows {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+div.state-SettingsApp-windows > * {
+  width: 100%;
+}

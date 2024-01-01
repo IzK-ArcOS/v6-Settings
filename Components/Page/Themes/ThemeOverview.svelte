@@ -4,6 +4,7 @@
   import { ThemeCaptions } from "$ts/stores/themes/values";
   import { UserDataStore } from "$ts/stores/user";
   import ThemePreview from "../../ThemePreview.svelte";
+  import Desktop from "../../ThemePreview/Desktop.svelte";
   import AccentColor from "./ThemeOverview/AccentColor.svelte";
 
   export let handler: StateHandler;
@@ -19,7 +20,7 @@
 </script>
 
 <div class="theme-overview">
-  <ThemePreview />
+  <ThemePreview><Desktop /></ThemePreview>
   <div class="common">
     <div class="common-option accent">
       <div class="text">
@@ -32,13 +33,15 @@
       <div class="text">
         <p class="name">Visual Style</p>
         <p class="value">
-          {ThemeCaptions[$UserDataStore.sh.desktop.theme] || "Invalid"}
+          <select class="flat" bind:value={$UserDataStore.sh.desktop.theme}>
+            <option value="dark">Darkmode</option>
+            <option value="light">Lightmode</option>
+            <option value="amoled">Amoled</option>
+            <option value="amber">Amber Monochrome</option>
+            <option value="scifi">Science Fiction</option>
+            <option value="hc">High contrast</option>
+          </select>
         </p>
-      </div>
-      <div class="right">
-        <button class="material-icons-round edit" on:click={changeStyle}
-          >launch</button
-        >
       </div>
     </div>
     <button class="save-theme" on:click={saveTheme}>Save Theme...</button>
