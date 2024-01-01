@@ -36,6 +36,7 @@
 
 #SettingsApp div.sidebar button.page.selected {
   font-weight: bold;
+  background-color: var(--accent-transparent);
 }
 
 #SettingsApp div.sidebar button.page img.icon {
@@ -49,10 +50,6 @@
 
 #SettingsApp div.sidebar button.page:hover {
   background-color: var(--button-glass-bg);
-}
-
-#SettingsApp div.sidebar button.page.selected {
-  background-color: var(--accent-transparent);
 }
 
 #SettingsApp div.sidebar button.page:active {
