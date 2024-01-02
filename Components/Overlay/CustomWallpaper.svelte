@@ -1,7 +1,6 @@
 <script lang="ts">
   import { OverlayRuntime } from "$apps/Settings/ts/overlays/runtime";
   import { DesktopIcon } from "$ts/images/general";
-  import { ProfilePictures } from "$ts/stores/pfp";
   import { ProcessStack } from "$ts/stores/process";
   import { UserDataStore } from "$ts/stores/user";
   import ValueChanger from "../ValueChanger.svelte";

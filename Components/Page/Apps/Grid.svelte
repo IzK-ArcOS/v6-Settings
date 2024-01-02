@@ -1,12 +1,11 @@
 <script lang="ts">
   import { Runtime } from "$apps/Settings/ts/runtime";
+  import { AppsViewMode } from "$apps/Settings/ts/types";
   import { appLibrary } from "$ts/stores/apps";
   import { ReadableStore } from "$types/writable";
   import Fuse from "fuse.js";
-  import App from "./Grid/App.svelte";
   import { onMount } from "svelte";
-  import { AppsViewMode } from "$apps/Settings/ts/types";
-  import { isPopulatable } from "$ts/apps";
+  import App from "./Grid/App.svelte";
 
   export let runtime: Runtime;
   export let query: ReadableStore<string>;

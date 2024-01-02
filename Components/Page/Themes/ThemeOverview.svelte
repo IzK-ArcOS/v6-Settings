@@ -1,7 +1,6 @@
 <script lang="ts">
   import { Runtime } from "$apps/Settings/ts/runtime";
   import { StateHandler } from "$ts/states";
-  import { ThemeCaptions } from "$ts/stores/themes/values";
   import { UserDataStore } from "$ts/stores/user";
   import ThemePreview from "../../ThemePreview.svelte";
   import Desktop from "../../ThemePreview/Desktop.svelte";
