@@ -14,7 +14,7 @@ div.state-SettingsApp-apps div.filter div.sep {
 
 div.state-SettingsApp-apps div.filter div.view-modes {
   display: flex;
-  gap: 5px;
+  gap: 10px;
 }
 
 div.state-SettingsApp-apps div.filter div.view-modes button {
