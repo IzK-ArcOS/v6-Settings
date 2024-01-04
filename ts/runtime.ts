@@ -14,6 +14,12 @@ export class Runtime extends AppRuntime {
     super(app, mutator, process);
 
     this.state = new StateHandler(app.id, SettingsStore, "account");
+
+    const args = process.args;
+
+    if (!args.length || typeof args[0] != "string") return;
+
+    this.state.navigate(args[0])
   }
 
   showOverlay(id: string, args: any[] = []) {
