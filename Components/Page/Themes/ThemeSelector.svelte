@@ -23,12 +23,12 @@
 </script>
 
 <div class="theme-selector">
-  {#each Object.entries(BuiltinThemes) as [_, theme]}
-    <ThemeOption {theme} />
+  {#each Object.entries(BuiltinThemes) as [id, theme]}
+    <ThemeOption {theme} {id} />
   {/each}
   {#if !reload && $UserDataStore.sh.userThemes}
     {#each Object.entries($UserDataStore.sh.userThemes) as theme}
-      <ThemeOption theme={theme[1]} />
+      <ThemeOption theme={theme[1]} id={theme[0]} user />
     {/each}
   {/if}
 </div>

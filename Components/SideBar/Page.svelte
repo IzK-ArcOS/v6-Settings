@@ -12,7 +12,13 @@
   }
 </script>
 
-<button class="page" class:selected on:click={switchTo}>
+<button
+  class="page"
+  class:selected
+  on:click={switchTo}
+  data-contextmenu="sidebar-page"
+  data-id={id}
+>
   <img src={page.image} alt={id} />
   <span class="name">{page.name}</span>
 </button>

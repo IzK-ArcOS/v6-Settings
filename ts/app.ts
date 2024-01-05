@@ -2,6 +2,7 @@ import { ArcOSVersion } from "$ts/env";
 import { SettingsIcon } from "$ts/images/apps";
 import { App } from "$types/app";
 import AppSvelte from "../App.svelte";
+import { SettingsContext } from "./context";
 import { Runtime } from "./runtime";
 
 export const SettingsApp: App = {
@@ -32,5 +33,6 @@ export const SettingsApp: App = {
     close: true,
   },
   glass: true,
-  singleInstance: true
+  singleInstance: true,
+  contextMenu: SettingsContext
 };
