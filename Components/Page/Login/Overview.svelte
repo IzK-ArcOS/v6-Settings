@@ -34,6 +34,7 @@
             suggested: true,
           },
         ],
+        sound: "arcos.dialog.warning",
       },
       runtime.pid,
       true

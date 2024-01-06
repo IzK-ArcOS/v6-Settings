@@ -1,6 +1,7 @@
 <script lang="ts">
   import { OverlayRuntime } from "$apps/Settings/ts/overlays/runtime";
-  import { AccountIcon, WarningIcon } from "$ts/images/general";
+  import { AccountIcon } from "$ts/images/general";
+  import { WarningIcon } from "$ts/images/dialog";
   import { createErrorDialog } from "$ts/process/error";
   import { changeUsername } from "$ts/server/user/mutate";
   import { ProcessStack } from "$ts/stores/process";
@@ -25,6 +26,7 @@
             "An error occured while changing your username. Please try again later. If the problem keeps happening, please submit a bug report.",
           buttons: [{ caption: "Okay", action() {}, suggested: true }],
           image: WarningIcon,
+          sound: "arcos.dialog.error",
         },
         runtime.process.parentPid,
         true
@@ -39,6 +41,7 @@
         message: `Your ArcOS username has been updated successfully. You will have to log in again on other devices, as their login information is now invalid.`,
         buttons: [{ caption: "Great!", action: cancel, suggested: true }],
         image: AccountIcon,
+        sound: "arcos.dialog.info",
       },
       runtime.process.parentPid,
       true

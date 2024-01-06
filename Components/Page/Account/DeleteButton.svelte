@@ -3,14 +3,12 @@
   import { TrashIcon } from "$ts/images/general";
   import { createErrorDialog } from "$ts/process/error";
   import { deleteSelf } from "$ts/server/user/mutate";
-  import { ConnectedServer } from "$ts/stores/server";
   import { UserToken } from "$ts/stores/user";
   import Dialog from "./DeleteButton/Dialog.svelte";
 
   export let runtime: Runtime;
 
   function deleteAccount() {
-    const s = ConnectedServer.get().host;
     createErrorDialog(
       {
         title: "Delete ArcOS Account",
@@ -28,6 +26,7 @@
             suggested: true,
           },
         ],
+        sound: "arcos.dialog.warning",
       },
       runtime.pid,
       true

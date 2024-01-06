@@ -33,6 +33,7 @@
             "An error occured while changing your password. Please try again later. If the problem keeps happening, please submit a bug report.",
           buttons: [{ caption: "Okay", action() {}, suggested: true }],
           image: PasswordIcon,
+          sound: "arcos.dialog.error",
         },
         runtime.process.parentPid,
         true
@@ -47,6 +48,7 @@
         message: `Your ArcOS password has been updated successfully. You will have to log in again on other devices, as their login information is now invalid.`,
         buttons: [{ caption: "Great!", action: cancel, suggested: true }],
         image: PasswordIcon,
+        sound: "arcos.dialog.info",
       },
       runtime.process.parentPid,
       true

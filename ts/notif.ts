@@ -1,4 +1,5 @@
-import { TrashIcon, WarningIcon } from "$ts/images/general";
+import { TrashIcon } from "$ts/images/general";
+import { WarningIcon } from "$ts/images/dialog";
 import { sendNotification } from "$ts/notif";
 import { createErrorDialog } from "$ts/process/error";
 import { deleteCustomTheme } from "$ts/themes";
@@ -26,6 +27,7 @@ export function DeleteUserThemeConfirm(pid: number, id: string) {
           deleteCustomTheme(id);
         },
         suggested: true
-      }]
+      }],
+    sound: "arcos.dialog.warning"
   }, pid, true)
 }
