@@ -21,6 +21,7 @@ div.state-SettingsApp-apps div.filter div.view-modes button {
   margin: 0;
   padding: 0 10px;
   height: 30px;
+  white-space: nowrap;
 }
 
 div.state-SettingsApp-apps div.filter div.view-modes button.selected {
@@ -44,6 +45,8 @@ div.state-SettingsApp-apps div.filter div.search-field input {
   border: none;
   flex-grow: 1;
   box-shadow: none;
+  width: 0;
+  flex-grow: 1;
 }
 
 div.state-SettingsApp-apps div.filter div.search-field span.icon {
