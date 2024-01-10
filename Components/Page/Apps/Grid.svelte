@@ -40,10 +40,10 @@
     };
 
     const fuse = new Fuse(items, options);
-    const result = fuse.search($query);
+    const results = fuse.search($query);
 
-    for (let i = 0; i < result.length; i++) {
-      filterResult.push(result[i].item.id);
+    for (const result of results) {
+      filterResult.push(result.item.id);
     }
   }
 
@@ -52,7 +52,7 @@
   });
 </script>
 
-<div class="apps-grid">
+<div class="apps-grid" data-contextmenu="apps-grid">
   {#each [...$appLibrary] as [id, app]}
     {#if !filtering || filterResult.includes(id)}
       <App {runtime} {id} {app} {view} />
