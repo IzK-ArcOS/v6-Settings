@@ -15,6 +15,10 @@ export class Runtime extends AppRuntime {
 
     this.state = new StateHandler(app.id, SettingsStore, "account");
 
+    process.handler.dispatch.subscribe<string>(process.pid, "change-page", (page) => {
+      this.state.navigate(page)
+    })
+
     const args = process.args;
 
     if (!args.length || typeof args[0] != "string") return;

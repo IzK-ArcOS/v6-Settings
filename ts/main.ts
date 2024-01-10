@@ -1,7 +1,12 @@
 import { spawnApp } from "$ts/apps";
-import { killAllAppInstances } from "$ts/process/kill";
+import { focusedPid } from "$ts/stores/apps";
+import { ProcessStack } from "$ts/stores/process";
 
 export async function OpenSettingsPage(page: string) {
-  await killAllAppInstances("SettingsApp");
-  spawnApp("SettingsApp", null, [page]);
+  const pid = ProcessStack.getAppPids("SettingsApp")[0];
+
+  if (!pid) spawnApp("SettingsApp", 0, [page]);
+
+  ProcessStack.dispatch.dispatchToPid<string>(pid, "change-page", page);
+  focusedPid.set(pid)
 }
