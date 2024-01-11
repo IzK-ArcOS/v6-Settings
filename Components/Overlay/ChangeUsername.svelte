@@ -1,7 +1,7 @@
 <script lang="ts">
   import { OverlayRuntime } from "$apps/Settings/ts/overlays/runtime";
-  import { AccountIcon } from "$ts/images/general";
   import { WarningIcon } from "$ts/images/dialog";
+  import { AccountIcon } from "$ts/images/general";
   import { createErrorDialog } from "$ts/process/error";
   import { changeUsername } from "$ts/server/user/mutate";
   import { ProcessStack } from "$ts/stores/process";

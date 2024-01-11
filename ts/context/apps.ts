@@ -1,6 +1,4 @@
-import { SEP_ITEM } from "$state/Desktop/ts/store";
 import { UserDataStore } from "$ts/stores/user";
-import { AppKeyCombinations } from "$types/accelerator";
 import { AppContextMenu } from "$types/app";
 
 export const SettingsAppsContext: AppContextMenu = {

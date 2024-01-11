@@ -1,5 +1,5 @@
-import { TrashIcon } from "$ts/images/general";
 import { WarningIcon } from "$ts/images/dialog";
+import { TrashIcon } from "$ts/images/general";
 import { sendNotification } from "$ts/notif";
 import { createErrorDialog } from "$ts/process/error";
 import { deleteCustomTheme } from "$ts/themes";
