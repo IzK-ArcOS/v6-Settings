@@ -16,11 +16,14 @@
   export let runtime: OverlayRuntime;
 
   function cancel() {
-    ProcessStack.kill(runtime.pid);
+    ProcessStack.kill(runtime.pid, true);
   }
 
   async function confirm() {
-    const elevation = await GetUserElevation(ElevationChangePassword());
+    const elevation = await GetUserElevation(
+      ElevationChangePassword(),
+      ProcessStack
+    );
 
     if (!elevation) return cancel();
 

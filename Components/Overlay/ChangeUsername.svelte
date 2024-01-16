@@ -14,11 +14,14 @@
   let newUsername: string;
 
   function cancel() {
-    ProcessStack.kill(runtime.pid);
+    ProcessStack.kill(runtime.pid, true);
   }
 
   async function confirm() {
-    const elevation = await GetUserElevation(ElevationChangeUsername());
+    const elevation = await GetUserElevation(
+      ElevationChangeUsername(),
+      ProcessStack
+    );
 
     if (!elevation) return cancel();
 

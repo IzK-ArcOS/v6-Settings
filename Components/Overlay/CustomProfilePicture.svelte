@@ -18,11 +18,11 @@
   function apply() {
     applyCustomPfp(img);
 
-    ProcessStack.kill(runtime.pid);
+    ProcessStack.kill(runtime.pid, true);
   }
 
   function cancel() {
-    ProcessStack.kill(runtime.pid);
+    ProcessStack.kill(runtime.pid, true);
   }
 
   async function checkImage(url): Promise<boolean> {
