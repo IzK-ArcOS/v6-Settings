@@ -1,8 +1,10 @@
 <script lang="ts">
   import { OverlayRuntime } from "$apps/Settings/ts/overlays/runtime";
+  import { GetUserElevation } from "$ts/elevation";
   import { PasswordIcon } from "$ts/images/general";
   import { createErrorDialog } from "$ts/process/error";
   import { changePassword } from "$ts/server/user/mutate";
+  import { ElevationChangePassword } from "$ts/stores/elevation";
   import { ProcessStack } from "$ts/stores/process";
   import { UserName } from "$ts/stores/user";
   import ValueChanger from "../ValueChanger.svelte";
@@ -18,6 +20,10 @@
   }
 
   async function confirm() {
+    const elevation = await GetUserElevation(ElevationChangePassword());
+
+    if (!elevation) return cancel();
+
     const changed = await changePassword(
       $UserName,
       oldPassword,
