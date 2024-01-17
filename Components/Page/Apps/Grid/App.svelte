@@ -2,6 +2,7 @@
   import { Runtime } from "$apps/Settings/ts/runtime";
   import { AppsViewMode } from "$apps/Settings/ts/types";
   import { isPopulatable } from "$ts/apps";
+  import { isDisabled } from "$ts/apps/disable/utils";
   import { UserDataStore } from "$ts/stores/user";
   import { App } from "$types/app";
 
@@ -11,9 +12,11 @@
   export let view: AppsViewMode;
 
   let render = true;
+  let disabled = false;
 
   UserDataStore.subscribe(() => {
     render = isPopulatable(app);
+    disabled = isDisabled(id);
   });
 
   function showDetails() {
@@ -22,7 +25,7 @@
 </script>
 
 {#if (view == "all" || (view == "builtin" && !app.sideload) || (view == "sideloaded" && app.sideload)) && render}
-  <button class="app" on:click={showDetails}>
+  <button class="app" on:click={showDetails} class:disabled>
     <img src={app.metadata.icon} alt={id} />
     <div>
       <p class="name">{app.metadata.name}</p>

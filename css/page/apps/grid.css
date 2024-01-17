@@ -19,6 +19,10 @@ div.state-SettingsApp-apps div.apps-grid button {
   height: 42px;
 }
 
+div.state-SettingsApp-apps div.apps-grid button.disabled {
+  opacity: 0.5;
+}
+
 div.state-SettingsApp-apps div.apps-grid button p.name {
   font-weight: bold;
 }
