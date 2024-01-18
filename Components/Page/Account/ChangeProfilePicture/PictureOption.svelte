@@ -4,7 +4,6 @@
 
   export let pfp: string;
   export let i: number;
-  export let editing: boolean;
 
   function apply() {
     $UserDataStore.acc.profilePicture = i + 1;

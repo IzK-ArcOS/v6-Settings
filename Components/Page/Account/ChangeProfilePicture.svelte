@@ -18,7 +18,7 @@
 
 <div class="profile-pictures">
   {#each Object.values(ProfilePictures) as pfp, i}
-    <PictureOption {pfp} {i} bind:editing />
+    <PictureOption {pfp} {i} />
   {/each}
 </div>
 <div class="actions">
