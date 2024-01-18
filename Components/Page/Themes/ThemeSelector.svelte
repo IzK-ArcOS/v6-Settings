@@ -8,6 +8,8 @@
   let reload = false;
 
   UserDataStore.subscribe((v) => {
+    if (!v || !v.sh || !v.sh.userThemes) return;
+
     const freshEntries = Object.entries(v.sh.userThemes);
 
     if (oldlength == freshEntries.length) return;
