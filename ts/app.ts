@@ -12,6 +12,7 @@ export const SettingsApp: App = {
     author: "The ArcOS Team",
     version: ArcOSVersion,
     icon: SettingsIcon,
+    appGroup: "systemTools"
   },
   runtime: Runtime,
   content: AppSvelte,
