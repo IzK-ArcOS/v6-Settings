@@ -18,13 +18,15 @@
 </script>
 
 <div class="sidebar">
-  <AccountButton {runtime} {current} />
-  <hr />
-  {#if pages.size}
-    {#each [...pages] as [id, page]}
-      {#if !page.attribs.hidden}
-        <Page {id} {page} selected={current == id} {runtime} />
-      {/if}
-    {/each}
-  {/if}
+  <div class="flex">
+    <AccountButton {runtime} {current} />
+    <hr />
+    {#if pages.size}
+      {#each [...pages] as [id, page]}
+        {#if !page.attribs.hidden}
+          <Page {id} {page} selected={current == id} {runtime} />
+        {/if}
+      {/each}
+    {/if}
+  </div>
 </div>

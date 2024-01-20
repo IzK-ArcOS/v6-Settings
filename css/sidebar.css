@@ -1,10 +1,14 @@
 @import url("./sidebar/account.css");
 
 #SettingsApp div.sidebar {
+  padding: 15px;
+  overflow-y: auto;
+}
+
+#SettingsApp div.flex {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  padding: 15px;
 }
 
 #SettingsApp div.sidebar hr {
