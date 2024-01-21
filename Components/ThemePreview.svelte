@@ -5,15 +5,10 @@
   export let noDecorations = false;
   export let isLogin = false;
 
-  let wallpaper = "";
+  let loginBg = "";
 
   UserDataStore.subscribe(async (v) => {
-    wallpaper = (
-      await getWallpaper(
-        isLogin ? v.acc.loginBackground : v.sh.desktop.wallpaper,
-        isLogin ? "img15" : "img04"
-      )
-    ).url;
+    loginBg = (await getWallpaper(v.acc.loginBackground, "img15")).url;
   });
 </script>
 
@@ -22,7 +17,7 @@
   class:sharp={$UserDataStore.sh.desktop.sharp}
   class:noani={!$UserDataStore.sh.anim}
   class:noglass={$UserDataStore.sh.noGlass}
-  style="--bg: url({wallpaper});"
+  style="--bg: {isLogin ? `url(${loginBg})` : 'var(--wallpaper)'};"
 >
   {#if !noDecorations}
     <slot />

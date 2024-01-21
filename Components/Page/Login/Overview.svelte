@@ -1,5 +1,6 @@
 <script lang="ts">
   import { Runtime } from "$apps/Settings/ts/runtime";
+  import { QuestionIcon } from "$ts/images/dialog";
   import { createErrorDialog } from "$ts/process/error";
   import { UserDataStore } from "$ts/stores/user";
   import { getWallpaper } from "$ts/wallpaper";
@@ -34,6 +35,7 @@
             suggested: true,
           },
         ],
+        image: QuestionIcon,
         sound: "arcos.dialog.warning",
       },
       runtime.pid,

@@ -2,7 +2,16 @@
   display: flex;
   gap: 20px;
   width: 100%;
+  min-height: 150px !important;
   align-items: center;
+}
+
+#SettingsApp div.theme-overview div.center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 #SettingsApp div.theme-overview input.picker {
@@ -33,6 +42,9 @@
 
 #SettingsApp div.theme-overview div.common p.value {
   opacity: 0.5;
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 #SettingsApp div.theme-overview div.common-option {

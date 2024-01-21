@@ -1,5 +1,6 @@
 <script lang="ts">
   import { Runtime } from "$apps/Settings/ts/runtime";
+  import Spinner from "$lib/Components/Spinner.svelte";
   import { toBase64 } from "$ts/base64";
   import { createDirectory } from "$ts/server/fs/dir";
   import { directSingleUpload } from "$ts/server/fs/upload";
@@ -32,14 +33,14 @@
   }
 </script>
 
-{#if wallpaper}
-  <div class="theme-overview">
+<div class="theme-overview">
+  {#if wallpaper}
     <ThemePreview><Desktop /></ThemePreview>
     <div class="common">
       <div class="common-option">
         <div class="text">
           <p class="name">Name</p>
-          <p class="value">{wallpaper.name}</p>
+          <p class="value" title={wallpaper.name}>{wallpaper.name}</p>
         </div>
       </div>
       <div class="common-option">
@@ -65,5 +66,7 @@
         </button>
       </div>
     </div>
-  </div>
-{/if}
+  {:else}
+    <div class="center-flex"><Spinner height={32} /></div>
+  {/if}
+</div>
