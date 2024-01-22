@@ -12,7 +12,8 @@
 @import url("./page/apps.css");
 @import url("./page/about.css");
 
-#SettingsApp {
+#SettingsApp,
+#SettingsApp * {
   --titlebar-height: 50px;
 }
 
