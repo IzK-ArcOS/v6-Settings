@@ -18,7 +18,7 @@
 }
 
 #SettingsApp window * {
-  --titlebar-height: 0px;
+  --titlebar-height: 40px;
 }
 
 #SettingsApp > div.body {
@@ -28,18 +28,18 @@
   height: 100%;
 }
 
-#SettingsApp div.sidebar {
+#SettingsApp > div.body div.sidebar {
   width: var(--sidebar-width);
   height: 100%;
   border-right: var(--win-border-light);
 }
 
-#SettingsApp div.content-wrapper {
+#SettingsApp > div.body div.content-wrapper {
   background-color: var(--win-bg);
   width: calc(100% - var(--sidebar-width));
 }
 
-#SettingsApp div.content-wrapper div.state-renderer {
+#SettingsApp > div.body div.content-wrapper div.state-renderer {
   padding: 20px;
   padding-top: 5px;
   height: calc(100% - var(--titlebar-height));
@@ -49,6 +49,6 @@
   transition: none;
   overflow: auto;
 }
-#SettingsApp div.state-renderer hr {
+#SettingsApp > div.body div.state-renderer hr {
   border: var(--button-hover-bg) 1px solid;
 }

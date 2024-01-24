@@ -1,6 +1,9 @@
 import { SEP_ITEM } from "$state/Desktop/ts/store";
 import { SaveIcon, ThemesIcon, TrashIcon } from "$ts/images/general";
 import { tryJsonConvert } from "$ts/json";
+import { textToBlob } from "$ts/server/fs/convert";
+import { writeFile } from "$ts/server/fs/file";
+import { GetSaveFilePath } from "$ts/stores/apps/file";
 import { applySystemTheme, applyUserTheme, saveThemeToFilesystem } from "$ts/themes";
 import { AppContextMenu } from "$types/app";
 import { UserTheme } from "$types/theme";
@@ -18,13 +21,21 @@ export const ThemeContext: AppContextMenu = {
     {
       image: SaveIcon,
       caption: "Save to ArcFS",
-      async action(_, data) {
+      async action(app, data) {
         const theme = tryJsonConvert<UserTheme>(data.theme);
         const name = data.name
 
         if (!theme || !name) return;
 
-        const written = await saveThemeToFilesystem(theme, name);
+        const path = await GetSaveFilePath(app.pid, {
+          title: "Save theme file to...",
+          icon: ThemesIcon,
+          saveName: `${name}.arctheme`,
+          startDir: "./Themes",
+          isSave: true
+        })
+
+        const written = await writeFile(path, textToBlob(JSON.stringify(theme, null, 2)));
 
         if (!written) FsThemeSaveFailed(name)
       }

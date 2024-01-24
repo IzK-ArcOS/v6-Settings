@@ -1,4 +1,4 @@
-#SettingsApp div.value-changer {
+#SettingsApp > div.body div.value-changer {
   display: flex;
   align-items: start;
   gap: 0;
@@ -6,7 +6,7 @@
   width: 100%;
 }
 
-#SettingsApp div.value-changer div.top {
+#SettingsApp > div.body div.value-changer div.top {
   display: flex;
   align-items: start;
   gap: 15px;
@@ -15,13 +15,13 @@
   padding: 20px;
 }
 
-#SettingsApp div.value-changer div.image img {
+#SettingsApp > div.body div.value-changer div.image img {
   height: 48px;
   aspect-ratio: 1/1;
   border-radius: 5px;
 }
 
-#SettingsApp div.value-changer div.changer-content {
+#SettingsApp > div.body div.value-changer div.changer-content {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -29,19 +29,19 @@
   flex-grow: 1;
 }
 
-#SettingsApp div.value-changer div.changer-content h3 {
+#SettingsApp > div.body div.value-changer div.changer-content h3 {
   margin: 0;
 }
 
-#SettingsApp div.value-changer div.changer-content p {
+#SettingsApp > div.body div.value-changer div.changer-content p {
   margin: 0;
 }
 
-#SettingsApp div.value-changer div.changer-content input {
+#SettingsApp > div.body div.value-changer div.changer-content input {
   width: 100%;
 }
 
-#SettingsApp div.value-changer div.buttons {
+#SettingsApp > div.body div.value-changer div.buttons {
   display: flex;
   margin-top: 0;
   justify-content: flex-end;
@@ -51,26 +51,34 @@
   width: 100%;
 }
 
-#SettingsApp div.value-changer div.buttons {
+#SettingsApp > div.body div.value-changer div.buttons {
   margin: 0;
   display: flex;
   gap: 10px;
   margin-left: auto;
 }
 
-#SettingsApp div.value-changer div.buttons button {
+#SettingsApp > div.body div.value-changer div.buttons button {
   min-width: 70px;
   margin: 0;
 }
 
-#SettingsApp div.value-changer div.buttons button:not(.suggested) {
+#SettingsApp > div.body div.value-changer div.buttons button:not(.suggested) {
   background-color: var(--button-hover-bg);
 }
 
-#SettingsApp div.value-changer div.buttons button:not(.suggested):hover {
+#SettingsApp
+  > div.body
+  div.value-changer
+  div.buttons
+  button:not(.suggested):hover {
   background-color: var(--button-glass-hover-bg);
 }
 
-#SettingsApp div.value-changer div.buttons button:not(.suggested):active {
+#SettingsApp
+  > div.body
+  div.value-changer
+  div.buttons
+  button:not(.suggested):active {
   background-color: var(--button-active-bg);
 }
