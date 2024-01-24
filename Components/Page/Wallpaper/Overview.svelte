@@ -23,6 +23,7 @@
     const path = await directSingleUpload(
       "./Wallpapers",
       false,
+      0,
       "image/png, image/jpeg, image/gif, image/svg+xml"
     );
 
