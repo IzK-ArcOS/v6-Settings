@@ -1,5 +1,6 @@
 <script lang="ts">
   import { Runtime } from "$apps/Settings/ts/runtime";
+  import { restart } from "$state/Desktop/ts/power";
   import { TrashIcon } from "$ts/images/general";
   import { createErrorDialog } from "$ts/process/error";
   import { deleteSelf } from "$ts/server/user/mutate";
@@ -20,7 +21,8 @@
             caption: "Delete acount",
             async action() {
               await deleteSelf(UserToken.get());
-              alert("Now restarting, this has to be fixed!");
+              localStorage.removeItem("arcos-remembered-token");
+              restart();
               location.reload();
             },
             suggested: true,
