@@ -23,7 +23,6 @@
               await deleteSelf(UserToken.get());
               localStorage.removeItem("arcos-remembered-token");
               restart();
-              location.reload();
             },
             suggested: true,
           },

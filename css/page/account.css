@@ -65,7 +65,12 @@ div.state-SettingsApp-account div.credentials div.credential {
   padding-right: 10px;
 }
 
-div.state-SettingsApp-account div.credentials div.credential button.edit {
+#SettingsApp
+  > div.body
+  div.state-SettingsApp-account
+  div.credentials
+  div.credential
+  button.edit {
   border-radius: 7px;
   padding: 0;
   background-color: transparent;
@@ -74,7 +79,12 @@ div.state-SettingsApp-account div.credentials div.credential button.edit {
   padding: 5px;
 }
 
-div.state-SettingsApp-account div.credentials div.credential button.edit:hover {
+#SettingsApp
+  > div.body
+  div.state-SettingsApp-account
+  div.credentials
+  div.credential
+  button.edit:hover {
   background-color: var(--button-hover-bg);
 }
 
