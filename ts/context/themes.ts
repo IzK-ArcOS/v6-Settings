@@ -61,7 +61,7 @@ export const ThemeContext: AppContextMenu = {
       image: SaveIcon,
       caption: "Save to ArcFS",
       async action(_, data) {
-        const theme = tryJsonConvert<UserTheme>(data.theme);
+        const theme = tryJsonConvert<UserTheme>(data.theme) as UserTheme;
         const name = data.name
 
         if (!theme || !name) return;
