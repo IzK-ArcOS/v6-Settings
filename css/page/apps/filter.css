@@ -25,8 +25,8 @@ div.state-SettingsApp-apps div.filter div.view-modes button {
 }
 
 div.state-SettingsApp-apps div.filter div.view-modes button.selected {
-  background-color: var(--accent);
-  color: var(--accent-darkest);
+  background-color: var(--accent) !important;
+  color: var(--accent-darkest) !important;
 }
 
 div.state-SettingsApp-apps div.filter div.search-field {
