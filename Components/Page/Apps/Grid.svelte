@@ -6,6 +6,7 @@
   import Fuse from "fuse.js";
   import { onMount } from "svelte";
   import App from "./Grid/App.svelte";
+  import { UserDataStore } from "$ts/stores/user";
 
   export let runtime: Runtime;
   export let query: ReadableStore<string>;
@@ -52,10 +53,17 @@
   });
 </script>
 
-<div class="apps-grid" data-contextmenu="apps-grid">
-  {#each [...$appLibrary] as [id, app]}
-    {#if !filtering || filterResult.includes(id)}
-      <App {runtime} {id} {app} {view} />
-    {/if}
-  {/each}
-</div>
+{#if $UserDataStore}
+  <div
+    class="apps-grid"
+    data-contextmenu="apps-grid"
+    class:list={$UserDataStore.appdata["SettingsApp"] &&
+      $UserDataStore.appdata["SettingsApp"].list}
+  >
+    {#each [...$appLibrary] as [id, app]}
+      {#if !filtering || filterResult.includes(id)}
+        <App {runtime} {id} {app} {view} />
+      {/if}
+    {/each}
+  </div>
+{/if}

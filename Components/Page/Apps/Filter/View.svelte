@@ -5,8 +5,8 @@
 
   const MODES: Record<AppsViewMode, string> = {
     all: "All",
-    builtin: "Built-in",
-    sideloaded: "Third-party",
+    user: "User",
+    system: "Components",
   };
 </script>
 

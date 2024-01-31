@@ -2,8 +2,9 @@ div.state-SettingsApp-apps div.filter {
   display: flex;
   align-items: center;
   gap: 10px;
-  height: 70px;
-  padding: 20px;
+  height: 50px;
+  padding: 20px 15px;
+  padding-top: 0;
 }
 
 div.state-SettingsApp-apps div.filter div.sep {

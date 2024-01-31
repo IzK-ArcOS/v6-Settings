@@ -24,12 +24,14 @@
   }
 </script>
 
-{#if (view == "all" || (view == "builtin" && !app.sideload) || (view == "sideloaded" && app.sideload)) && render}
+{#if (view == "all" || (view == "user" && !app.metadata.hidden) || (view == "system" && app.metadata.hidden)) && render}
   <button class="app" on:click={showDetails} class:disabled>
     <img src={app.metadata.icon} alt={id} />
     <div>
-      <p class="name">{app.metadata.name}</p>
-      <p class="author">{app.metadata.author}</p>
+      <p class="name" title={app.metadata.name}>{app.metadata.name}</p>
+      <p class="author" title={app.metadata.description}>
+        {app.metadata.description} - v{app.metadata.version}
+      </p>
     </div>
   </button>
 {/if}

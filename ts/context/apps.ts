@@ -6,13 +6,32 @@ export const SettingsAppsContext: AppContextMenu = {
     {
       caption: "View",
       icon: "visibility",
-      subItems: [{
-        caption: "Grid",
-        icon: "grid_view"
-      }, {
-        caption: "List",
-        icon: "details"
-      }]
+      subItems: [
+        {
+          caption: "Grid",
+          icon: "grid_view",
+          action() {
+            const udata = UserDataStore.get();
+
+            udata.appdata["SettingsApp"].list = false;
+
+            UserDataStore.set(udata);
+          },
+          isActive: () => !UserDataStore.get().appdata["SettingsApp"].list
+        },
+        {
+          caption: "List",
+          icon: "details",
+          action() {
+            const udata = UserDataStore.get();
+
+            udata.appdata["SettingsApp"].list = true;
+
+            UserDataStore.set(udata);
+          },
+          isActive: () => !!UserDataStore.get().appdata["SettingsApp"].list
+        }
+      ]
     },
     {
       caption: "Show hidden apps",
