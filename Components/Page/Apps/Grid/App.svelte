@@ -1,7 +1,6 @@
 <script lang="ts">
   import { Runtime } from "$apps/Settings/ts/runtime";
   import { AppsViewMode } from "$apps/Settings/ts/types";
-  import { isPopulatable } from "$ts/apps";
   import { isDisabled } from "$ts/apps/disable/utils";
   import { UserDataStore } from "$ts/stores/user";
   import { App } from "$types/app";
@@ -11,11 +10,9 @@
   export let runtime: Runtime;
   export let view: AppsViewMode;
 
-  let render = true;
   let disabled = false;
 
   UserDataStore.subscribe(() => {
-    render = isPopulatable(app);
     disabled = isDisabled(id);
   });
 
@@ -24,7 +21,7 @@
   }
 </script>
 
-{#if (view == "all" || (view == "user" && !app.metadata.hidden) || (view == "system" && app.metadata.hidden)) && render}
+{#if view == "all" || (view == "user" && !app.metadata.hidden) || (view == "system" && app.metadata.hidden)}
   <button class="app" on:click={showDetails} class:disabled>
     <img src={app.metadata.icon} alt={id} />
     <div>
