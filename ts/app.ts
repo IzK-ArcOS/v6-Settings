@@ -19,7 +19,7 @@ export const SettingsApp: App = {
   id: "SettingsApp",
   size: { w: 730, h: 500 },
   minSize: { w: 730, h: 500 },
-  maxSize: { w: 1100, h: 600 },
+  maxSize: { w: 860, h: 600 },
   pos: { x: 30, y: 40 },
   state: {
     minimized: false,
@@ -30,7 +30,7 @@ export const SettingsApp: App = {
   },
   controls: {
     minimize: true,
-    maximize: true,
+    maximize: false,
     close: true,
   },
   glass: true,

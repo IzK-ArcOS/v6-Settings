@@ -1,10 +1,9 @@
-#SettingsApp > div.titlebar {
+#SettingsApp > div.body div.titlebar {
   align-items: start;
-  padding: 5px;
   padding-top: 10px;
   background-color: transparent !important;
 }
-
+/* 
 #SettingsApp > div.titlebar h1 {
   margin: 10px 15px;
 }
@@ -12,3 +11,4 @@
 #SettingsApp > div.titlebar.left div.controls {
   padding-left: 15px;
 }
+ */
