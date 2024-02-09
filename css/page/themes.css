@@ -13,7 +13,7 @@
 }
 
 div.state-SettingsApp-themes div.theme-overview select {
-  margin: 0 -5px !important;
+  margin: 0 !important;
   width: 100%;
   background-color: var(--win-bg) !important;
   color: var(--fg) !important;
