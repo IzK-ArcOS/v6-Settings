@@ -8,7 +8,7 @@
   }
 </script>
 
-<div class="pfp-wrapper">
+<div class="pfp-wrapper" data-contextmenu="account-pfp">
   <ProfilePicture height={128} />
   <button class="edit-button material-icons-round" on:click={toggle}>
     {editing ? "close" : "edit"}

@@ -35,4 +35,10 @@
   }
 </script>
 
-<button class="delete" on:click={deleteAccount}>Delete account...</button>
+<button
+  class="delete"
+  on:click={deleteAccount}
+  data-contextmenu="account-delete"
+>
+  Delete account...
+</button>

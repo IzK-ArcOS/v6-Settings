@@ -21,14 +21,14 @@
 <div class="theme-overview">
   <ThemePreview><Desktop /></ThemePreview>
   <div class="common">
-    <div class="common-option accent">
+    <div class="common-option accent" data-contextmenu="themes-accent">
       <div class="text">
         <p class="name">Accent</p>
         <p class="value">#{$UserDataStore.sh.desktop.accent}</p>
       </div>
       <AccentColor />
     </div>
-    <div class="common-option style">
+    <div class="common-option style" data-contextmenu="themes-accent">
       <div class="text">
         <p class="name">Visual Style</p>
         <p class="value">
@@ -43,6 +43,12 @@
         </p>
       </div>
     </div>
-    <button class="save-theme" on:click={saveTheme}>Save Theme...</button>
+    <button
+      data-contextmenu="themes-save"
+      class="save-theme"
+      on:click={saveTheme}
+    >
+      Save Theme...
+    </button>
   </div>
 </div>

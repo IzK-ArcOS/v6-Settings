@@ -14,7 +14,7 @@
 </script>
 
 <div class="credentials">
-  <div class="credential username">
+  <div class="credential username" data-contextmenu="account-username">
     <div>
       <p class="caption">What's your name?</p>
       <p class="value">{$UserName}</p>
@@ -23,7 +23,7 @@
       edit
     </button>
   </div>
-  <div class="credential password">
+  <div class="credential password" data-contextmenu="account-password">
     <div>
       <p class="caption">Your password</p>
       <p class="value">••••••••••••••••••</p>
