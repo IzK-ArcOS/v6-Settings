@@ -3,6 +3,11 @@
   padding-top: 10px;
   background-color: transparent !important;
 }
+
+#SettingsApp > div.body div.titlebar div.controls {
+  background-color: var(--win-bg);
+  border-radius: 5px;
+}
 /* 
 #SettingsApp > div.titlebar h1 {
   margin: 10px 15px;

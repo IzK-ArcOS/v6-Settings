@@ -67,6 +67,14 @@
   div.state-renderer
   div.theme-selector
   button.theme-option
+  div.fake-window::before {
+  border-radius: 5px !important;
+}
+
+#SettingsApp
+  div.state-renderer
+  div.theme-selector
+  button.theme-option
   div.fake-window.shell-colored::before {
   z-index: 0 !important;
 }

@@ -42,13 +42,6 @@
   />
 </SettingsOption>
 <hr />
-<SettingsOption title="Small start menu" context="Make the start menu smaller">
-  <input
-    type="checkbox"
-    class="switch"
-    bind:checked={$UserDataStore.sh.start.small}
-  />
-</SettingsOption>
 <SettingsOption
   title="Don't group start"
   context="Disable the start menu app grouping"
@@ -59,7 +52,6 @@
     bind:checked={$UserDataStore.sh.start.noGroups}
   />
 </SettingsOption>
-<hr />
 <SettingsOption title="Dock shell" context="Dock the taskbar and action center">
   <input
     type="checkbox"
