@@ -1,10 +1,10 @@
 <script lang="ts">
+  import GlowingLogo from "$lib/Components/GlowingLogo.svelte";
   import { ArcOSVersion } from "$ts/env";
-  import { GlowingLogo } from "$ts/images/branding";
   import { ARCOS_BUILD, ARCOS_MODE } from "$ts/metadata";
 </script>
 
-<img src={GlowingLogo} alt="ArcOS" class="logo" />
+<GlowingLogo className="logo" />
 <h1>ArcOS <span class="colored">v6</span></h1>
 <p>
   Thank you for using ArcOS! We're constantly working on improving it to give

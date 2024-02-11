@@ -13,7 +13,7 @@ export class Runtime extends AppRuntime {
   constructor(app: App, mutator: AppMutator, process: Process) {
     super(app, mutator, process);
 
-    this.state = new StateHandler(app.id, SettingsStore, "account");
+    this.state = new StateHandler(app.id, SettingsStore(), "account");
 
     process.handler.dispatch.subscribe<string>(process.pid, "change-page", (page) => {
       this.state.navigate(page)
