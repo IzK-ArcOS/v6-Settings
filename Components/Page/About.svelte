@@ -1,7 +1,13 @@
 <script lang="ts">
   import GlowingLogo from "$lib/Components/GlowingLogo.svelte";
   import { ArcOSVersion } from "$ts/env";
+  import { GetHelp } from "$ts/help";
   import { ARCOS_BUILD, ARCOS_MODE } from "$ts/metadata";
+  import { HelpArticles } from "$ts/stores/articles";
+
+  function contact() {
+    GetHelp(HelpArticles.contact);
+  }
 </script>
 
 <GlowingLogo className="logo" />
@@ -10,6 +16,9 @@
   Thank you for using ArcOS! We're constantly working on improving it to give
   you the best experience possible. Curious who works on ArcOS? Go ahead and
   visit our Frontend GitHub page, we list our contributors there.
+  <br /><br />
+  Want to contact us?
+  <button class="link" on:click={contact}>Do so here</button>.
 </p>
 <p class="version">
   v{ArcOSVersion}-{ARCOS_MODE}
