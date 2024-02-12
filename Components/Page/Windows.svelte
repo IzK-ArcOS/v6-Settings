@@ -32,7 +32,8 @@
     bind:checked={$UserDataStore.sh.window.centertb}
   />
 </SettingsOption>
-
+<!-- 
 <SettingsOption title="Titlebar buttons" context="Change the titlebar buttons">
   <button disabled>Change...</button>
 </SettingsOption>
+ -->
