@@ -1,7 +1,10 @@
 #SettingsApp > div.body div.titlebar {
   align-items: start;
+  padding: 10px;
+  padding-bottom: 5px;
   padding-top: 10px;
   background-color: transparent !important;
+  flex-direction: row !important;
 }
 
 #SettingsApp > div.body div.titlebar div.controls {
