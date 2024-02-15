@@ -24,10 +24,14 @@
       "./Wallpapers",
       false,
       0,
-      "image/png, image/jpeg, image/gif, image/svg+xml"
+      "image/png, image/jpeg, image/gif, image/svg+xml",
     );
 
-    $UserDataStore.sh.desktop.wallpaper = `@local:${toBase64(path)}`;
+    const base64 = toBase64(path);
+
+    if (base64 == path) return;
+
+    $UserDataStore.sh.desktop.wallpaper = `@local:${base64}`;
   }
 
   function custom() {
@@ -52,18 +56,10 @@
         </div>
       </div>
       <div class="buttons">
-        <button
-          class="button material-icons-round"
-          title="Upload a wallpaper"
-          on:click={upload}
-        >
+        <button class="button material-icons-round" title="Upload a wallpaper" on:click={upload}>
           upload
         </button>
-        <button
-          class="button material-icons-round"
-          title="Wallpaper from URL"
-          on:click={custom}
-        >
+        <button class="button material-icons-round" title="Wallpaper from URL" on:click={custom}>
           travel_explore
         </button>
       </div>
