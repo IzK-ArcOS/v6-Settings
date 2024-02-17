@@ -1,5 +1,5 @@
 import { spawnApp } from "$ts/apps";
-import { focusedPid } from "$ts/stores/apps";
+import { focusedPid } from "$ts/stores/apps/focus";
 import { ProcessStack } from "$ts/stores/process";
 
 export async function OpenSettingsPage(page: string) {
@@ -8,5 +8,5 @@ export async function OpenSettingsPage(page: string) {
   if (!pid) spawnApp("SettingsApp", 0, [page]);
 
   ProcessStack.dispatch.dispatchToPid<string>(pid, "change-page", page);
-  focusedPid.set(pid)
+  focusedPid.set(pid);
 }
