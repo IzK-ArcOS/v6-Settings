@@ -43,18 +43,8 @@
   });
 </script>
 
-<ValueChanger
-  img={valid ? img : ProfilePictures.def}
-  {cancel}
-  confirm={apply}
-  disabled={!valid}
->
+<ValueChanger img={valid ? img : ProfilePictures.def} {cancel} confirm={apply} disabled={!valid}>
   <h3>Custom Profile Picture</h3>
   <p>Enter the URL to any image you like:</p>
-  <input
-    type="url"
-    bind:value={img}
-    placeholder="https://example.com/image.png"
-    on:input={check}
-  />
+  <input type="url" bind:value={img} placeholder="https://example.com/image.png" on:input={check} />
 </ValueChanger>

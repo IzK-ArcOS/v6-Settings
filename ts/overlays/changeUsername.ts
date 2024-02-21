@@ -9,7 +9,7 @@ export const ChangeUsername: App = {
     description: "Change your ArcOS Username",
     author: "ArcOS Team",
     version: "1.0.0",
-    icon: AccountIcon
+    icon: AccountIcon,
   },
   runtime: OverlayRuntime,
   size: { w: 350, h: 182 },
@@ -17,15 +17,16 @@ export const ChangeUsername: App = {
   maxSize: { w: 350, h: 182 },
   id: "ChangeUsername",
   pos: {
-    x: 0, y: 0,
+    x: 0,
+    y: 0,
   },
   state: {
     minimized: false,
     maximized: false,
     headless: false,
     fullscreen: false,
-    resizable: false
+    resizable: false,
   },
   controls: { minimize: false, maximize: false, close: false },
-  content: ChangeUsernameSvelte
-}
+  content: ChangeUsernameSvelte,
+};

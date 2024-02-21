@@ -16,14 +16,14 @@ export class Runtime extends AppRuntime {
     this.state = new StateHandler(app.id, SettingsStore(), "account");
 
     process.handler.dispatch.subscribe<string>(process.pid, "change-page", (page) => {
-      this.state.navigate(page)
-    })
+      this.state.navigate(page);
+    });
 
     const args = process.args;
 
     if (!args.length || typeof args[0] != "string") return;
 
-    this.state.navigate(args[0])
+    this.state.navigate(args[0]);
   }
 
   showOverlay(id: string, args: any[] = []) {
@@ -32,7 +32,11 @@ export class Runtime extends AppRuntime {
     const overlay = SettingsOverlays[id];
 
     if (!overlay) {
-      this.Log(`Can't show non-existent overlay ${id}. This is a bug.`, "showOverlay", LogLevel.error)
+      this.Log(
+        `Can't show non-existent overlay ${id}. This is a bug.`,
+        "showOverlay",
+        LogLevel.error
+      );
       return false;
     }
 

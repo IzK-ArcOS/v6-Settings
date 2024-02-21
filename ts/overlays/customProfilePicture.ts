@@ -9,7 +9,7 @@ export const CustomProfilePicture: App = {
     description: "Change your profile picture to something custom",
     author: "ArcOS Team",
     version: "2.0.0",
-    icon: PersonalizationIcon
+    icon: PersonalizationIcon,
   },
   runtime: OverlayRuntime,
   size: { w: 350, h: 182 },
@@ -17,15 +17,16 @@ export const CustomProfilePicture: App = {
   maxSize: { w: 350, h: 182 },
   id: "CustomProfilePicture",
   pos: {
-    x: 0, y: 0,
+    x: 0,
+    y: 0,
   },
   state: {
     minimized: false,
     maximized: false,
     headless: false,
     fullscreen: false,
-    resizable: false
+    resizable: false,
   },
   controls: { minimize: false, maximize: false, close: false },
-  content: CustomProfilePictureSvelte
-}
+  content: CustomProfilePictureSvelte,
+};

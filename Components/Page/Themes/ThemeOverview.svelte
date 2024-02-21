@@ -43,11 +43,7 @@
         </p>
       </div>
     </div>
-    <button
-      data-contextmenu="themes-save"
-      class="save-theme"
-      on:click={saveTheme}
-    >
+    <button data-contextmenu="themes-save" class="save-theme" on:click={saveTheme}>
       Save Theme...
     </button>
   </div>

@@ -6,9 +6,9 @@ export const SettingsSideBarContext: AppContextMenu = {
       caption: "Copy command to page",
       action(window, data, scope) {
         const command = `open ${window.id} ["${data.id}"]`;
-        navigator.clipboard.writeText(command)
+        navigator.clipboard.writeText(command);
       },
-      icon: "copy"
-    }
-  ]
-}
+      icon: "copy",
+    },
+  ],
+};

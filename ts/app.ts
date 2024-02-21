@@ -13,7 +13,7 @@ export const SettingsApp: App = {
     author: "The ArcOS Team",
     version: ArcOSVersion,
     icon: SettingsIcon,
-    appGroup: "systemTools"
+    appGroup: "systemTools",
   },
   runtime: Runtime,
   content: AppSvelte,
@@ -37,5 +37,5 @@ export const SettingsApp: App = {
   glass: true,
   singleInstance: true,
   contextMenu: SettingsContext,
-  helpArticle: HelpArticles.settings
+  helpArticle: HelpArticles.settings,
 };

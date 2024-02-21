@@ -3,9 +3,7 @@
 
 #SettingsApp div.content-wrapper div.state-renderer.state-SettingsApp-themes,
 #SettingsApp div.content-wrapper div.state-renderer.state-SettingsApp-login,
-#SettingsApp
-  div.content-wrapper
-  div.state-renderer.state-SettingsApp-wallpaper {
+#SettingsApp div.content-wrapper div.state-renderer.state-SettingsApp-wallpaper {
   display: flex;
   flex-direction: column;
   padding: 5px 15px 15px;
@@ -19,10 +17,7 @@ div.state-SettingsApp-themes div.theme-overview select {
   color: var(--fg) !important;
 }
 
-div.state-SettingsApp-themes
-  div.theme-overview
-  div.common-option.style
-  div.text {
+div.state-SettingsApp-themes div.theme-overview div.common-option.style div.text {
   flex-grow: 1;
 }
 

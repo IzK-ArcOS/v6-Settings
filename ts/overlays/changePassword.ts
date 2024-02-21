@@ -9,7 +9,7 @@ export const ChangePassword: App = {
     description: "Change your ArcOS Password",
     author: "ArcOS Team",
     version: "1.0.0",
-    icon: PasswordIcon
+    icon: PasswordIcon,
   },
   runtime: OverlayRuntime,
   size: { w: 430, h: 265 },
@@ -17,15 +17,16 @@ export const ChangePassword: App = {
   maxSize: { w: 430, h: 265 },
   id: "ChangePassword",
   pos: {
-    x: 0, y: 0,
+    x: 0,
+    y: 0,
   },
   state: {
     minimized: false,
     maximized: false,
     headless: false,
     fullscreen: false,
-    resizable: false
+    resizable: false,
   },
   controls: { minimize: false, maximize: false, close: false },
-  content: ChangePasswordSvelte
-}
+  content: ChangePasswordSvelte,
+};

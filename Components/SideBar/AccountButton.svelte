@@ -31,11 +31,7 @@
 </script>
 
 {#if page}
-  <button
-    class="page account"
-    class:selected={current == PAGE_ID}
-    on:click={go}
-  >
+  <button class="page account" class:selected={current == PAGE_ID} on:click={go}>
     <ProfilePicture src={pfp} height={30} />
     <span class="name">
       <p class="username">{$UserName}</p>

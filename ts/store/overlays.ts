@@ -14,5 +14,5 @@ export const SettingsOverlays: Record<string, App> = {
   SaveTheme,
   CustomWallpaper,
   CustomLoginBackground,
-  AppInfo
-}
+  AppInfo,
+};

@@ -9,7 +9,7 @@ export const CustomWallpaper: App = {
     description: "Change your desktop wallpaper to something beautiful.",
     author: "ArcOS Team",
     version: "2.0.0",
-    icon: DesktopIcon
+    icon: DesktopIcon,
   },
   runtime: OverlayRuntime,
   size: { w: 350, h: 182 },
@@ -17,15 +17,16 @@ export const CustomWallpaper: App = {
   maxSize: { w: 350, h: 182 },
   id: "CustomWallpaper",
   pos: {
-    x: 0, y: 0,
+    x: 0,
+    y: 0,
   },
   state: {
     minimized: false,
     maximized: false,
     headless: false,
     fullscreen: false,
-    resizable: false
+    resizable: false,
   },
   controls: { minimize: false, maximize: false, close: false },
-  content: CustomWallpaperSvelte
-}
+  content: CustomWallpaperSvelte,
+};

@@ -8,7 +8,16 @@ import Visuals from "$apps/Settings/Components/Page/Visuals.svelte";
 import Wallpaper from "$apps/Settings/Components/Page/Wallpaper.svelte";
 import Windows from "$apps/Settings/Components/Page/Windows.svelte";
 import { Logo } from "$ts/branding";
-import { AccountIcon, AppsIcon, DesktopIcon, PasswordIcon, PersonalizationIcon, TaskbarIcon, ThemesIcon, WindowSettingsIcon } from "$ts/images/general";
+import {
+  AccountIcon,
+  AppsIcon,
+  DesktopIcon,
+  PasswordIcon,
+  PersonalizationIcon,
+  TaskbarIcon,
+  ThemesIcon,
+  WindowSettingsIcon,
+} from "$ts/images/general";
 import { States } from "$types/state";
 
 export function SettingsStore(): States {
@@ -20,7 +29,7 @@ export function SettingsStore(): States {
         name: "Your Account",
         content: Account,
         attribs: {
-          hidden: true
+          hidden: true,
         },
         image: AccountIcon,
       },
@@ -32,8 +41,8 @@ export function SettingsStore(): States {
         name: "Themes",
         content: Themes,
         attribs: {},
-        image: ThemesIcon
-      }
+        image: ThemesIcon,
+      },
     ],
     [
       "wallpaper",
@@ -42,8 +51,8 @@ export function SettingsStore(): States {
         name: "Wallpaper",
         content: Wallpaper,
         attribs: {},
-        image: DesktopIcon
-      }
+        image: DesktopIcon,
+      },
     ],
     [
       "login",
@@ -52,8 +61,8 @@ export function SettingsStore(): States {
         name: "Login Background",
         content: Login,
         attribs: {},
-        image: PasswordIcon
-      }
+        image: PasswordIcon,
+      },
     ],
     [
       "visuals",
@@ -62,8 +71,8 @@ export function SettingsStore(): States {
         name: "Visuals",
         content: Visuals,
         attribs: { separator: true },
-        image: PersonalizationIcon
-      }
+        image: PersonalizationIcon,
+      },
     ],
     [
       "shell",
@@ -73,7 +82,7 @@ export function SettingsStore(): States {
         content: Shell,
         attribs: {},
         image: TaskbarIcon,
-      }
+      },
     ],
     [
       "windows",
@@ -82,8 +91,8 @@ export function SettingsStore(): States {
         name: "Windows",
         content: Windows,
         attribs: {},
-        image: WindowSettingsIcon
-      }
+        image: WindowSettingsIcon,
+      },
     ],
     [
       "apps",
@@ -92,8 +101,8 @@ export function SettingsStore(): States {
         name: "Apps",
         content: Apps,
         attribs: { separator: true },
-        image: AppsIcon
-      }
+        image: AppsIcon,
+      },
     ],
     [
       "about",
@@ -102,9 +111,8 @@ export function SettingsStore(): States {
         name: "About ArcOS",
         content: About,
         attribs: {},
-        image: Logo()
-      }
-    ]
+        image: Logo(),
+      },
+    ],
   ]);
-
 }

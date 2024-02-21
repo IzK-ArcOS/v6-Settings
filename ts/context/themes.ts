@@ -6,7 +6,7 @@ import { textToBlob } from "$ts/server/fs/convert";
 import { writeFile } from "$ts/server/fs/file";
 import { GetSaveFilePath } from "$ts/stores/apps/file";
 import { HelpArticles } from "$ts/stores/articles";
-import { applySystemTheme, applyUserTheme, saveThemeToFilesystem } from "$ts/themes";
+import { applySystemTheme, applyUserTheme } from "$ts/themes";
 import { AppContextMenu } from "$types/app";
 import { UserTheme } from "$types/theme";
 import { DeleteUserThemeConfirm, FsThemeSaveFailed } from "../notif";
@@ -25,7 +25,7 @@ export const ThemeContext: AppContextMenu = {
       caption: "Save to ArcFS",
       async action(app, data) {
         const theme = tryJsonConvert<UserTheme>(data.theme);
-        const name = data.name
+        const name = data.name;
 
         if (!theme || !name) return;
 
@@ -34,12 +34,12 @@ export const ThemeContext: AppContextMenu = {
           icon: ThemesIcon,
           saveName: `${name}.arctheme`,
           startDir: "./Themes",
-          isSave: true
-        })
+          isSave: true,
+        });
 
         const written = await writeFile(path, textToBlob(JSON.stringify(theme, null, 2)));
 
-        if (!written) FsThemeSaveFailed(name)
+        if (!written) FsThemeSaveFailed(name);
       },
     },
     SEP_ITEM,
@@ -55,9 +55,9 @@ export const ThemeContext: AppContextMenu = {
       icon: "question_mark",
       caption: "Get Help",
       action() {
-        GetHelp(HelpArticles.settingsThemesApply)
-      }
-    }
+        GetHelp(HelpArticles.settingsThemesApply);
+      },
+    },
   ],
   "system-theme": [
     {
@@ -72,7 +72,7 @@ export const ThemeContext: AppContextMenu = {
       caption: "Save to ArcFS",
       async action(app, data) {
         const theme = tryJsonConvert<UserTheme>(data.theme);
-        const name = data.name
+        const name = data.name;
 
         if (!theme || !name) return;
 
@@ -81,12 +81,12 @@ export const ThemeContext: AppContextMenu = {
           icon: ThemesIcon,
           saveName: `${name}.arctheme`,
           startDir: "./Themes",
-          isSave: true
-        })
+          isSave: true,
+        });
 
         const written = await writeFile(path, textToBlob(JSON.stringify(theme, null, 2)));
 
-        if (!written) FsThemeSaveFailed(name)
+        if (!written) FsThemeSaveFailed(name);
       },
     },
     SEP_ITEM,
@@ -94,26 +94,26 @@ export const ThemeContext: AppContextMenu = {
       icon: "question_mark",
       caption: "Get Help",
       action() {
-        GetHelp(HelpArticles.settingsThemesApply)
-      }
-    }
+        GetHelp(HelpArticles.settingsThemesApply);
+      },
+    },
   ],
   "themes-accent": [
     {
       caption: "What's this?",
       icon: "question_mark",
       action() {
-        GetHelp(HelpArticles.settingsThemesStyle)
-      }
-    }
+        GetHelp(HelpArticles.settingsThemesStyle);
+      },
+    },
   ],
   "themes-save": [
     {
       caption: "What's this?",
       icon: "question_mark",
       action() {
-        GetHelp(HelpArticles.settingsThemesSave)
-      }
-    }
-  ]
-}
+        GetHelp(HelpArticles.settingsThemesSave);
+      },
+    },
+  ],
+};

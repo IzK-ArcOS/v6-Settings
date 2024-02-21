@@ -18,10 +18,7 @@
   }
 
   async function confirm() {
-    const elevation = await GetUserElevation(
-      ElevationChangeUsername(),
-      ProcessStack
-    );
+    const elevation = await GetUserElevation(ElevationChangeUsername(), ProcessStack);
 
     if (!elevation) return cancel();
 
@@ -38,7 +35,7 @@
           sound: "arcos.dialog.error",
         },
         runtime.process.parentPid,
-        true
+        true,
       );
 
       return;
@@ -53,7 +50,7 @@
         sound: "arcos.dialog.info",
       },
       runtime.process.parentPid,
-      true
+      true,
     );
 
     cancel();

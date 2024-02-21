@@ -48,12 +48,7 @@
   });
 </script>
 
-<ValueChanger
-  img={valid ? background : PasswordIcon}
-  {cancel}
-  confirm={apply}
-  disabled={!valid}
->
+<ValueChanger img={valid ? background : PasswordIcon} {cancel} confirm={apply} disabled={!valid}>
   <h3>Custom Login Background</h3>
   <p>Enter the URL to any image you like:</p>
   <input

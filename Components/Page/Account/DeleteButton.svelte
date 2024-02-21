@@ -30,15 +30,11 @@
         sound: "arcos.dialog.warning",
       },
       runtime.pid,
-      true
+      true,
     );
   }
 </script>
 
-<button
-  class="delete"
-  on:click={deleteAccount}
-  data-contextmenu="account-delete"
->
+<button class="delete" on:click={deleteAccount} data-contextmenu="account-delete">
   Delete account...
 </button>

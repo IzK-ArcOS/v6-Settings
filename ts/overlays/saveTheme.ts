@@ -9,7 +9,7 @@ export const SaveTheme: App = {
     description: "Save your beautiful theme to your account",
     author: "ArcOS Team",
     version: "2.0.0",
-    icon: SaveIcon
+    icon: SaveIcon,
   },
   runtime: OverlayRuntime,
   size: { w: 350, h: 380 },
@@ -17,15 +17,16 @@ export const SaveTheme: App = {
   maxSize: { w: 350, h: 380 },
   id: "SaveTheme",
   pos: {
-    x: 0, y: 0,
+    x: 0,
+    y: 0,
   },
   state: {
     minimized: false,
     maximized: false,
     headless: false,
     fullscreen: false,
-    resizable: false
+    resizable: false,
   },
   controls: { minimize: false, maximize: false, close: false },
-  content: SaveThemeSvelte
-}
+  content: SaveThemeSvelte,
+};

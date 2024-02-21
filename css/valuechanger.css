@@ -71,18 +71,10 @@
   background-color: var(--button-hover-bg);
 }
 
-#SettingsApp
-  div.body
-  div.value-changer
-  div.buttons
-  button:not(.suggested):hover {
+#SettingsApp div.body div.value-changer div.buttons button:not(.suggested):hover {
   background-color: var(--button-glass-hover-bg);
 }
 
-#SettingsApp
-  div.body
-  div.value-changer
-  div.buttons
-  button:not(.suggested):active {
+#SettingsApp div.body div.value-changer div.buttons button:not(.suggested):active {
   background-color: var(--button-active-bg);
 }

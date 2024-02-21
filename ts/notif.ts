@@ -12,8 +12,8 @@ export function FsThemeSaveFailed(name: string) {
   sendNotification({
     title: "Couldn't save theme",
     message: `An error occured while saving ${name} to ArcFS. The file might already exist.`,
-    image: WarningIcon
-  })
+    image: WarningIcon,
+  });
 }
 
 /**
@@ -22,21 +22,27 @@ export function FsThemeSaveFailed(name: string) {
  * @param id the ID of the custom theme
  */
 export function DeleteUserThemeConfirm(pid: number, id: string) {
-  createErrorDialog({
-    title: "Delete theme?",
-    message: "Are you sure you want to delete this theme? This cannot be undone.",
-    image: TrashIcon,
-    buttons: [
-      {
-        caption: "Cancel",
-        action() { },
-      }, {
-        caption: "Delete Theme",
-        action() {
-          deleteCustomTheme(id);
+  createErrorDialog(
+    {
+      title: "Delete theme?",
+      message: "Are you sure you want to delete this theme? This cannot be undone.",
+      image: TrashIcon,
+      buttons: [
+        {
+          caption: "Cancel",
+          action() {},
         },
-        suggested: true
-      }],
-    sound: "arcos.dialog.warning"
-  }, pid, true)
+        {
+          caption: "Delete Theme",
+          action() {
+            deleteCustomTheme(id);
+          },
+          suggested: true,
+        },
+      ],
+      sound: "arcos.dialog.warning",
+    },
+    pid,
+    true
+  );
 }

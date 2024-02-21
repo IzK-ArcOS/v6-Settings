@@ -8,8 +8,8 @@ export const SettingsAccountContext: AppContextMenu = {
       caption: "What's this?",
       icon: "question_mark",
       action() {
-        GetHelp(HelpArticles.settingsAccountProfile)
-      }
+        GetHelp(HelpArticles.settingsAccountProfile);
+      },
     },
   ],
   "account-username": [
@@ -17,8 +17,8 @@ export const SettingsAccountContext: AppContextMenu = {
       caption: "What's this?",
       icon: "question_mark",
       action() {
-        GetHelp(HelpArticles.settingsAccountCredentials)
-      }
+        GetHelp(HelpArticles.settingsAccountCredentials);
+      },
     },
   ],
   "account-password": [
@@ -26,8 +26,8 @@ export const SettingsAccountContext: AppContextMenu = {
       caption: "What's this?",
       icon: "question_mark",
       action() {
-        GetHelp(HelpArticles.settingsAccountCredentials)
-      }
+        GetHelp(HelpArticles.settingsAccountCredentials);
+      },
     },
   ],
   "account-delete": [
@@ -35,8 +35,8 @@ export const SettingsAccountContext: AppContextMenu = {
       caption: "What's this?",
       icon: "question_mark",
       action() {
-        GetHelp(HelpArticles.settingsAccountDelete)
-      }
+        GetHelp(HelpArticles.settingsAccountDelete);
+      },
     },
-  ]
-}
+  ],
+};

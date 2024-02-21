@@ -3,7 +3,7 @@
   import { ArcOSVersion } from "$ts/env";
   import { GetHelp } from "$ts/help";
   import { ARCOS_BUILD, ARCOS_MODE } from "$ts/metadata";
-  import { getPartialFile, readFile } from "$ts/server/fs/file";
+  import { getPartialFile } from "$ts/server/fs/file";
   import { openFileWithApp } from "$ts/server/fs/open";
   import { HelpArticles } from "$ts/stores/articles";
 

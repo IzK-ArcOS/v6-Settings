@@ -48,12 +48,7 @@
   });
 </script>
 
-<ValueChanger
-  img={valid ? wallpaper : DesktopIcon}
-  {cancel}
-  confirm={apply}
-  disabled={!valid}
->
+<ValueChanger img={valid ? wallpaper : DesktopIcon} {cancel} confirm={apply} disabled={!valid}>
   <h3>Custom Wallpaper</h3>
   <p>Enter the URL to any wallpaper you like:</p>
   <input

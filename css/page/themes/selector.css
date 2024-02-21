@@ -17,10 +17,7 @@
   outline: 1px solid var(--button-bg);
 }
 
-#SettingsApp
-  div.state-renderer
-  div.theme-selector
-  button.theme-option.selected::after {
+#SettingsApp div.state-renderer div.theme-selector button.theme-option.selected::after {
   position: absolute;
   top: 0;
   left: 0;
@@ -47,11 +44,7 @@
   left: 0;
 }
 
-#SettingsApp
-  div.state-renderer
-  div.theme-selector
-  button.theme-option
-  div.fake-window {
+#SettingsApp div.state-renderer div.theme-selector button.theme-option div.fake-window {
   display: flex;
   justify-content: end;
   align-items: end;
@@ -63,11 +56,7 @@
   position: relative;
 }
 
-#SettingsApp
-  div.state-renderer
-  div.theme-selector
-  button.theme-option
-  div.fake-window::before {
+#SettingsApp div.state-renderer div.theme-selector button.theme-option div.fake-window::before {
   border-radius: 5px !important;
 }
 

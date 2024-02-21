@@ -9,7 +9,7 @@ export const CustomLoginBackground: App = {
     description: "Change your login background to something beautiful.",
     author: "ArcOS Team",
     version: "2.0.0",
-    icon: PasswordIcon
+    icon: PasswordIcon,
   },
   runtime: OverlayRuntime,
   size: { w: 350, h: 182 },
@@ -17,15 +17,16 @@ export const CustomLoginBackground: App = {
   maxSize: { w: 350, h: 182 },
   id: "CustomWallpaper",
   pos: {
-    x: 0, y: 0,
+    x: 0,
+    y: 0,
   },
   state: {
     minimized: false,
     maximized: false,
     headless: false,
     fullscreen: false,
-    resizable: false
+    resizable: false,
   },
   controls: { minimize: false, maximize: false, close: false },
-  content: CustomLoginBackgroundSvelte
-}
+  content: CustomLoginBackgroundSvelte,
+};

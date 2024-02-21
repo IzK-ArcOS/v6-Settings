@@ -2,11 +2,11 @@
   import { Runtime } from "$apps/Settings/ts/runtime";
   import { AppsViewMode } from "$apps/Settings/ts/types";
   import { appLibrary } from "$ts/stores/apps";
+  import { UserDataStore } from "$ts/stores/user";
   import { ReadableStore } from "$types/writable";
   import Fuse from "fuse.js";
   import { onMount } from "svelte";
   import App from "./Grid/App.svelte";
-  import { UserDataStore } from "$ts/stores/user";
 
   export let runtime: Runtime;
   export let query: ReadableStore<string>;
@@ -57,8 +57,7 @@
   <div
     class="apps-grid"
     data-contextmenu="apps-grid"
-    class:list={$UserDataStore.appdata["SettingsApp"] &&
-      $UserDataStore.appdata["SettingsApp"].list}
+    class:list={$UserDataStore.appdata["SettingsApp"] && $UserDataStore.appdata["SettingsApp"].list}
   >
     {#each [...$appLibrary] as [id, app]}
       {#if !filtering || filterResult.includes(id)}

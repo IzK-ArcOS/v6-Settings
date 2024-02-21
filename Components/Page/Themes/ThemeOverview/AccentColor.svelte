@@ -19,11 +19,7 @@
 </script>
 
 <div class="right">
-  <button
-    class="accent-circle"
-    on:click={openPicker}
-    style="background-color:#{hex};"
-  />
+  <button class="accent-circle" on:click={openPicker} style="background-color:#{hex};" />
   <input
     type="color"
     bind:this={picker}

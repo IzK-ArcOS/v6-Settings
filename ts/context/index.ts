@@ -9,4 +9,4 @@ export const SettingsContext: AppContextMenu = {
   ...ThemeContext,
   ...SettingsSideBarContext,
   ...SettingsAppsContext,
-}
+};

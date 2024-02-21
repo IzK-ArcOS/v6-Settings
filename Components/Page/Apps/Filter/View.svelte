@@ -12,11 +12,7 @@
 
 <div class="view-modes">
   {#each Object.entries(MODES) as [mode, caption]}
-    <button
-      class="mode"
-      class:selected={view == mode}
-      on:click={() => (view = mode)}
-    >
+    <button class="mode" class:selected={view == mode} on:click={() => (view = mode)}>
       {caption}
     </button>
   {/each}

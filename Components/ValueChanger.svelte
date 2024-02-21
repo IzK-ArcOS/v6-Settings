@@ -14,8 +14,6 @@
   </div>
   <div class="buttons">
     <button class="cancel" on:click={cancel}>Cancel</button>
-    <button class="confirm suggested" on:click={confirm} {disabled}>
-      Confirm
-    </button>
+    <button class="confirm suggested" on:click={confirm} {disabled}> Confirm </button>
   </div>
 </div>

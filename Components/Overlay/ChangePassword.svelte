@@ -20,19 +20,11 @@
   }
 
   async function confirm() {
-    const elevation = await GetUserElevation(
-      ElevationChangePassword(),
-      ProcessStack
-    );
+    const elevation = await GetUserElevation(ElevationChangePassword(), ProcessStack);
 
     if (!elevation) return cancel();
 
-    const changed = await changePassword(
-      $UserName,
-      oldPassword,
-      newPassword,
-      confirmPassword
-    );
+    const changed = await changePassword($UserName, oldPassword, newPassword, confirmPassword);
 
     if (!changed) {
       createErrorDialog(
@@ -45,7 +37,7 @@
           sound: "arcos.dialog.error",
         },
         runtime.process.parentPid,
-        true
+        true,
       );
 
       return;
@@ -60,7 +52,7 @@
         sound: "arcos.dialog.info",
       },
       runtime.process.parentPid,
-      true
+      true,
     );
 
     cancel();
@@ -75,15 +67,7 @@
 >
   <h3>Change your password</h3>
   <p>Fill out the following fields to change your password:</p>
-  <input
-    type="password"
-    bind:value={oldPassword}
-    placeholder="Current password"
-  />
+  <input type="password" bind:value={oldPassword} placeholder="Current password" />
   <input type="password" bind:value={newPassword} placeholder="New password" />
-  <input
-    type="password"
-    bind:value={confirmPassword}
-    placeholder="Confirm new password"
-  />
+  <input type="password" bind:value={confirmPassword} placeholder="Confirm new password" />
 </ValueChanger>

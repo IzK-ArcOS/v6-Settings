@@ -17,7 +17,7 @@ export const SettingsAppsContext: AppContextMenu = {
 
             UserDataStore.set(udata);
           },
-          isActive: () => !UserDataStore.get().appdata["SettingsApp"].list
+          isActive: () => !UserDataStore.get().appdata["SettingsApp"].list,
         },
         {
           caption: "List",
@@ -29,9 +29,9 @@ export const SettingsAppsContext: AppContextMenu = {
 
             UserDataStore.set(udata);
           },
-          isActive: () => !!UserDataStore.get().appdata["SettingsApp"].list
-        }
-      ]
+          isActive: () => !!UserDataStore.get().appdata["SettingsApp"].list,
+        },
+      ],
     },
     {
       caption: "Show hidden apps",
@@ -43,7 +43,7 @@ export const SettingsAppsContext: AppContextMenu = {
 
         UserDataStore.set(udata);
       },
-      isActive: () => UserDataStore.get().sh.showHiddenApps
+      isActive: () => UserDataStore.get().sh.showHiddenApps,
     },
-  ]
-}
+  ],
+};
