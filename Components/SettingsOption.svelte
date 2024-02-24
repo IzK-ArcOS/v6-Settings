@@ -2,12 +2,14 @@
   export let title: string;
   export let context: string;
   export let asterisk = false;
+  export let className = "";
+  export let disabled = false;
 </script>
 
-<div class="settings-option">
+<div class="settings-option {className}" class:disabled>
   <div>
     <h3 class="header" class:asterisk>{title}</h3>
-    <p class="context">{context}</p>
+    <p class="context">{@html context}</p>
   </div>
   <div class="option-input">
     <slot />
