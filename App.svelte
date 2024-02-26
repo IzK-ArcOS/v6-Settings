@@ -6,6 +6,7 @@
   import SideBar from "./Components/SideBar.svelte";
   import "./css/main.css";
   import { Runtime } from "./ts/runtime";
+  import { SafeMode } from "$state/Desktop/ts/store";
 
   export let pid: number;
   export let runtime: Runtime;
@@ -19,7 +20,7 @@
 
 {#if runtime && state}
   <SideBar {runtime} />
-  <div class="content-wrapper settings-page-{state.key}">
+  <div class="content-wrapper settings-page-{state.key}" class:safemode={$SafeMode}>
     <Titlebar app={runtime.appMutator} {pid} showIcon={false} showTitle={false}>
       <h1 class="page-title">{state.name}</h1>
     </Titlebar>

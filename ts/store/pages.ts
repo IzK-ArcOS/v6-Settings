@@ -42,6 +42,7 @@ export function SettingsStore(): States {
         content: Themes,
         attribs: {},
         image: ThemesIcon,
+        className: "safemode-hidden",
       },
     ],
     [
@@ -52,6 +53,7 @@ export function SettingsStore(): States {
         content: Wallpaper,
         attribs: {},
         image: DesktopIcon,
+        className: "safemode-hidden",
       },
     ],
     [
@@ -62,6 +64,7 @@ export function SettingsStore(): States {
         content: Login,
         attribs: {},
         image: PasswordIcon,
+        className: "safemode-hidden",
       },
     ],
     [
@@ -72,6 +75,7 @@ export function SettingsStore(): States {
         content: Visuals,
         attribs: { separator: true },
         image: PersonalizationIcon,
+        className: "safemode-hidden",
       },
     ],
     [
@@ -82,6 +86,7 @@ export function SettingsStore(): States {
         content: Shell,
         attribs: {},
         image: TaskbarIcon,
+        className: "safemode-hidden",
       },
     ],
     [
@@ -92,6 +97,7 @@ export function SettingsStore(): States {
         content: Windows,
         attribs: {},
         image: WindowSettingsIcon,
+        className: "safemode-hidden",
       },
     ],
     [

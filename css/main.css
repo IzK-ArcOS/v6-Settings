@@ -51,3 +51,7 @@
 #SettingsApp > div.body div.state-renderer hr {
   border: var(--button-hover-bg) 1px solid;
 }
+
+#SettingsApp > div.body div.content-wrapper.safemode div.safemode-hidden {
+  display: none;
+}

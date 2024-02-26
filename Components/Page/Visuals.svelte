@@ -3,6 +3,7 @@
   import SettingsOption from "../SettingsOption.svelte";
 </script>
 
+z
 <SettingsOption title="Animations" context="Display animations on windows and elements">
   <input type="checkbox" class="switch" bind:checked={$UserDataStore.sh.anim} />
 </SettingsOption>
