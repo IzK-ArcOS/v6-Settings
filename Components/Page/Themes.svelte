@@ -8,6 +8,5 @@
   export let handler: StateHandler;
 </script>
 
-z
 <ThemeOverview {runtime} {handler} />
 <ThemeSelector />

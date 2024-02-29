@@ -6,6 +6,5 @@
   export let runtime: Runtime;
 </script>
 
-z
 <Overview {runtime} />
 <WallpaperSelector />

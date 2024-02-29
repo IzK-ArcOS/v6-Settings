@@ -3,7 +3,6 @@
   import SettingsOption from "../SettingsOption.svelte";
 </script>
 
-z
 <SettingsOption title="Large titlebar" context="Make the titlebars larger">
   <input type="checkbox" class="switch" bind:checked={$UserDataStore.sh.window.bigtb} />
 </SettingsOption>
