@@ -18,7 +18,7 @@
 }
 
 #SettingsApp window * {
-  --titlebar-height: 40px;
+  --titlebar-height: 30px;
 }
 
 #SettingsApp > div.body {
