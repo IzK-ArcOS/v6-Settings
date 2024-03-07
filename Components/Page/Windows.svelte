@@ -1,5 +1,6 @@
 <script>
   import { UserDataStore } from "$ts/stores/user";
+  import { TitlebarButtons } from "$ts/stores/window";
   import SettingsOption from "../SettingsOption.svelte";
 </script>
 
@@ -17,8 +18,11 @@
 >
   <input type="checkbox" class="switch" bind:checked={$UserDataStore.sh.window.centertb} />
 </SettingsOption>
-<!-- 
-<SettingsOption title="Titlebar buttons" context="Change the titlebar buttons">
-  <button disabled>Change...</button>
+
+<SettingsOption title="Titlebar buttons" context="What titlebar buttons do you want?">
+  <select bind:value={$UserDataStore.sh.window.buttons}>
+    {#each Object.entries(TitlebarButtons) as [id, data]}
+      <option value={id}>{data.author} - {data.caption}</option>
+    {/each}
+  </select>
 </SettingsOption>
- -->
