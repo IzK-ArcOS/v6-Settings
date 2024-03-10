@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { Wallpapers } from "$ts/stores/wallpaper";
   import WallpaperOption from "./WallpaperSelector/WallpaperOption.svelte";
 </script>

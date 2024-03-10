@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import ProfilePicture from "$lib/Components/ProfilePicture.svelte";
   import { UserName } from "$ts/stores/user";
 </script>

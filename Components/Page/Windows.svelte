@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { UserDataStore } from "$ts/stores/user";
   import { TitlebarButtons } from "$ts/stores/window";
   import SettingsOption from "../SettingsOption.svelte";

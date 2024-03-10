@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { appLibrary } from "$ts/stores/apps";
   import { UserDataStore } from "$ts/stores/user";
 </script>

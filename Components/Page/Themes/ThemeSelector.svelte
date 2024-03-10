@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { BuiltinThemes } from "$ts/stores/themes/builtins";
   import { UserDataStore } from "$ts/stores/user";
   import ThemeOption from "./ThemeSelector/ThemeOption.svelte";
