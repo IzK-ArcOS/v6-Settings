@@ -18,7 +18,7 @@
         buttons: [
           { caption: "Back to safety", action() {} },
           {
-            caption: "Delete acount",
+            caption: "Delete account",
             async action() {
               await deleteSelf(UserToken.get());
               localStorage.removeItem("arcos-remembered-token");
