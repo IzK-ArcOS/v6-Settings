@@ -1,12 +1,12 @@
 <script lang="ts">
   import StateRenderer from "$lib/StateRenderer.svelte";
   import Titlebar from "$state/Desktop/Components/ProcessRenderer/Window/Titlebar.svelte";
+  import { SafeMode } from "$state/Desktop/ts/store";
   import { State } from "$types/state";
   import { onMount } from "svelte";
   import SideBar from "./Components/SideBar.svelte";
   import "./css/main.css";
   import { Runtime } from "./ts/runtime";
-  import { SafeMode } from "$state/Desktop/ts/store";
 
   export let pid: number;
   export let runtime: Runtime;
