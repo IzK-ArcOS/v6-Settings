@@ -18,9 +18,9 @@ export const SettingsApp: App = {
   runtime: Runtime,
   content: AppSvelte,
   id: "SettingsApp",
-  size: { w: 730, h: 500 },
-  minSize: { w: 730, h: 500 },
-  maxSize: { w: 860, h: 600 },
+  size: { w: 730, h: 550 },
+  minSize: { w: 730, h: 550 },
+  maxSize: { w: 860, h: 650 },
   pos: { x: 30, y: 40 },
   state: {
     minimized: false,
