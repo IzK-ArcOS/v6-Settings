@@ -2,6 +2,7 @@ import About from "$apps/Settings/Components/Page/About.svelte";
 import Account from "$apps/Settings/Components/Page/Account.svelte";
 import Apps from "$apps/Settings/Components/Page/Apps.svelte";
 import Login from "$apps/Settings/Components/Page/Login.svelte";
+import Security from "$apps/Settings/Components/Page/Security.svelte";
 import Shell from "$apps/Settings/Components/Page/Shell.svelte";
 import Themes from "$apps/Settings/Components/Page/Themes.svelte";
 import Visuals from "$apps/Settings/Components/Page/Visuals.svelte";
@@ -14,6 +15,7 @@ import {
   DesktopIcon,
   PasswordIcon,
   PersonalizationIcon,
+  SecureIcon,
   TaskbarIcon,
   ThemesIcon,
   WindowSettingsIcon,
@@ -108,6 +110,16 @@ export function SettingsStore(): States {
         content: Apps,
         attribs: { separator: true },
         image: AppsIcon,
+      },
+    ],
+    [
+      "security",
+      {
+        key: "security",
+        name: "Security Settings",
+        content: Security,
+        attribs: {},
+        image: SecureIcon,
       },
     ],
     [

@@ -10,6 +10,7 @@
 @import url("./page/shell.css");
 @import url("./page/windows.css");
 @import url("./page/apps.css");
+@import url("./page/security.css");
 @import url("./page/about.css");
 
 #SettingsApp,

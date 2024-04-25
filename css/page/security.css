@@ -1,0 +1,117 @@
+div.state-SettingsApp-security {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+div.state-SettingsApp-security div.settings-option {
+  margin: 0 !important;
+}
+
+div.state-SettingsApp-security h2.title {
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: var(--color) 1px solid;
+  --color: var(--clr-green-fg);
+}
+
+div.state-SettingsApp-security h2.title.lockdown {
+  --color: var(--clr-orange-fg) !important;
+}
+
+div.state-SettingsApp-security h2.title.bypass {
+  --color: var(--clr-red-fg);
+}
+
+div.state-SettingsApp-security h2.title.nopass:not(.bypass) {
+  --color: var(--clr-yellow-fg);
+}
+
+div.state-SettingsApp-security h2.title img {
+  height: 40px;
+}
+
+div.state-SettingsApp-security hr {
+  margin: 15px 0;
+  border: var(--button-hover-bg) 1px solid;
+}
+
+#ProcessManager div.settings-option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+#ProcessManager div.settings-option > div {
+  max-width: 75%;
+}
+
+#ProcessManager div.settings-option h3.header {
+  margin: 0;
+}
+
+#ProcessManager div.settings-option.disabled {
+  opacity: 0.4;
+}
+
+#ProcessManager div.settings-option p.context {
+  margin-bottom: 0;
+  opacity: 0.6;
+}
+
+#ProcessManager div.settings-option div.option-input {
+  margin: 0;
+  margin-left: auto;
+}
+
+#ProcessManager div.settings-option div.option-input select {
+  min-width: 100px;
+  margin: 5px 0;
+  height: 30px;
+  background-color: var(--button-bg);
+}
+
+#ProcessManager div.settings-option div.option-input select:hover {
+  background-color: var(--button-hover-bg);
+}
+
+#ProcessManager div.settings-option div.option-input button {
+  height: 26px;
+  margin: 7px 0;
+}
+
+div.state-SettingsApp-security div.settings-option.bypass {
+  padding: 15px 20px;
+  background-color: var(--clr-red-bg);
+  border-radius: 10px;
+  border: var(--button-hover-bg) 1px solid;
+  margin: 20px 0;
+  gap: 10px;
+}
+
+div.state-SettingsApp-security div.settings-option.bypass.true {
+  background-color: var(--clr-green-bg);
+}
+
+div.state-SettingsApp-security div.settings-option.bypass button {
+  padding: 10px 20px;
+  height: fit-content !important;
+  white-space: nowrap;
+}
+div.state-SettingsApp-security div.settings-option.bypass div.option-input {
+  min-width: fit-content;
+}
+
+div.state-SettingsApp-security div.settings-option.bypass.true button {
+  background-color: rgba(112, 199, 77) !important;
+  color: #000 !important;
+}
+
+div.state-SettingsApp-security div.settings-option.bypass:not(.true) button {
+  background-color: rgba(228, 54, 54) !important;
+  color: #fff !important;
+}
