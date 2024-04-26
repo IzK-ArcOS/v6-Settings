@@ -12,7 +12,7 @@
   }
 
   async function license() {
-    const partial = await getPartialFile("@client/README.md");
+    const partial = await getPartialFile("@client/LICENSE.md");
     openFileWithApp("MarkDownViewer", partial);
   }
 </script>
