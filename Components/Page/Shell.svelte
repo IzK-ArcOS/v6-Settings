@@ -4,9 +4,9 @@
   import TaskbarPosition from "./Shell/TaskbarPosition.svelte";
 </script>
 
-<SettingsOption title="Center taskbar buttons" context="Centers the taskbar app buttons">
+<!-- <SettingsOption title="Center taskbar buttons" context="Centers the taskbar app buttons">
   <input type="checkbox" class="switch" bind:checked={$UserDataStore.sh.taskbar.centered} />
-</SettingsOption>
+</SettingsOption> -->
 <SettingsOption title="Taskbar app labels" context="Display app names on the taskbar">
   <input type="checkbox" class="switch" bind:checked={$UserDataStore.sh.taskbar.labels} />
 </SettingsOption>
