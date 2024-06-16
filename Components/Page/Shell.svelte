@@ -1,7 +1,14 @@
 <script lang="ts">
+  import { Runtime } from "$apps/Settings/ts/runtime";
   import { UserDataStore } from "$ts/stores/user";
   import SettingsOption from "../SettingsOption.svelte";
   import TaskbarPosition from "./Shell/TaskbarPosition.svelte";
+
+  export let runtime: Runtime;
+
+  function userStyle() {
+    runtime.showOverlay("UserStyleEditor");
+  }
 </script>
 
 <!-- <SettingsOption title="Center taskbar buttons" context="Centers the taskbar app buttons">
@@ -26,4 +33,8 @@
 </SettingsOption>
 <SettingsOption title="Compact context menu" context="Make the context menu more compact">
   <input type="checkbox" class="switch" bind:checked={$UserDataStore.sh.compactContext} />
+</SettingsOption>
+<hr />
+<SettingsOption title="User Styles" context="Add custom CSS to your desktop">
+  <button on:click={userStyle}>Edit...</button>
 </SettingsOption>

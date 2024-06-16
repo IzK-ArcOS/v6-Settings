@@ -88,7 +88,6 @@ export function SettingsStore(): States {
         content: Shell,
         attribs: {},
         image: TaskbarIcon,
-        className: "safemode-hidden",
       },
     ],
     [

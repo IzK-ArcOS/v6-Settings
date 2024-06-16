@@ -6,6 +6,7 @@ import { CustomLoginBackground } from "../overlays/customLoginBackground";
 import { CustomProfilePicture } from "../overlays/customProfilePicture";
 import { CustomWallpaper } from "../overlays/customWallpaper";
 import { SaveTheme } from "../overlays/saveTheme";
+import { UserStyleEditor } from "../overlays/userStyleEditor";
 
 export const SettingsOverlays: Record<string, App> = {
   ChangeUsername,
@@ -15,4 +16,5 @@ export const SettingsOverlays: Record<string, App> = {
   CustomWallpaper,
   CustomLoginBackground,
   AppInfo,
+  UserStyleEditor,
 };

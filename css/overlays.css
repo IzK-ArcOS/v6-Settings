@@ -1,5 +1,6 @@
 @import url("./overlays/changeusername.css");
 @import url("./overlays/savetheme.css");
+@import url("./overlays/userstyleeditor.css");
 
 #SettingsApp window.overlay div.body {
   padding: 0px;
