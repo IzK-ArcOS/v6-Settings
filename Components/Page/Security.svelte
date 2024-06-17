@@ -3,7 +3,7 @@
   import { GetUserElevation } from "$ts/elevation";
   import { SecurityHighIcon, SecurityLowIcon, SecurityMediumIcon } from "$ts/images/general";
   import { LockIcon } from "$ts/images/power";
-  import { ElevationEnableBypass } from "$ts/stores/elevation";
+  import { ElevationEnableBypass, ElevationEnableNoPassword } from "$ts/stores/elevation";
   import { ProcessStack } from "$ts/stores/process";
   import { UserDataStore } from "$ts/stores/user";
 
@@ -17,6 +17,18 @@
 
   function enableElevation() {
     $UserDataStore.sh.bypassElevation = false;
+  }
+
+  async function togglePassword(e: MouseEvent) {
+    if (!$UserDataStore.sh.securityNoPassword) {
+      e.preventDefault();
+
+      const elevated = await GetUserElevation(ElevationEnableNoPassword(), ProcessStack);
+
+      if (!elevated) return;
+
+      $UserDataStore.sh.securityNoPassword = true;
+    }
   }
 </script>
 
@@ -91,5 +103,6 @@
     class="switch"
     bind:checked={$UserDataStore.sh.securityNoPassword}
     disabled={$UserDataStore.sh.elevationDisabled || $UserDataStore.sh.bypassElevation}
+    on:click={(e) => togglePassword(e)}
   />
 </SettingsOption>
