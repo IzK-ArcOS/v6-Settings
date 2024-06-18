@@ -36,5 +36,6 @@
 </SettingsOption>
 <hr />
 <SettingsOption title="User Styles" context="Add custom CSS to your desktop">
-  <button on:click={userStyle}>Edit...</button>
+  <input type="checkbox" class="switch" bind:checked={$UserDataStore.sh.enableUserStyle} />
+  <button on:click={userStyle} disabled={!$UserDataStore.sh.enableUserStyle}>Edit...</button>
 </SettingsOption>

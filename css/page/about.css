@@ -3,7 +3,8 @@
 }
 
 #SettingsApp div.settings-page-about {
-  background: linear-gradient(to bottom, #000 0%, var(--accent-darkest) 100%);
+  background-color: transparent !important;
+  /* background: linear-gradient(to bottom, #0000 0%, var(--accent-light-transparent) 100%); */
 }
 
 #SettingsApp div.state-SettingsApp-about {
@@ -11,11 +12,11 @@
   align-items: center;
   flex-direction: column;
   padding: 10px 0;
-  color: #ccc;
   animation: appear 0.5s 0.5s forwards !important;
   padding-top: 30px;
   opacity: 0;
   scale: 0.9;
+  background-color: transparent;
 }
 
 #SettingsApp div.state-SettingsApp-about img {
@@ -28,7 +29,7 @@
 }
 
 #SettingsApp div.state-SettingsApp-about h1 span.colored {
-  color: #a876ff;
+  color: var(--accent);
 }
 
 #SettingsApp div.state-SettingsApp-about p {

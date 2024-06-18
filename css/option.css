@@ -17,6 +17,9 @@
 #SettingsApp div.settings-option div.option-input {
   margin: 0;
   margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 #SettingsApp div.settings-option div.option-input select {

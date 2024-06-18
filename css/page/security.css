@@ -87,10 +87,13 @@ div.state-SettingsApp-security hr {
 div.state-SettingsApp-security div.settings-option.bypass {
   padding: 15px 20px;
   background-color: var(--clr-red-bg);
-  border-radius: 10px;
-  border: var(--button-hover-bg) 1px solid;
-  margin: 20px 0;
+  border-radius: var(--win-border-rad);
+  margin-bottom: 10px !important;
   gap: 10px;
+}
+
+div.state-SettingsApp-security p.recommendation {
+  font-weight: bold;
 }
 
 div.state-SettingsApp-security div.settings-option.bypass.true {

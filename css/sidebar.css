@@ -31,7 +31,7 @@
   text-overflow: ellipsis;
   overflow: hidden;
   height: 35px;
-  border-radius: 7.5px;
+  border-radius: var(--button-border-rad);
 }
 
 #SettingsApp div.sidebar button.page img {

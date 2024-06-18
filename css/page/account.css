@@ -60,7 +60,7 @@ div.state-SettingsApp-account div.credentials div.credential {
 }
 
 #SettingsApp > div.body div.state-SettingsApp-account div.credentials div.credential button.edit {
-  border-radius: 7px;
+  border-radius: var(--button-border-rad);
   padding: 0;
   background-color: transparent;
   height: fit-content;

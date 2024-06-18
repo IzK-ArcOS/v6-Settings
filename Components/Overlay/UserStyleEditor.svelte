@@ -41,10 +41,10 @@
 </script>
 
 <div class="top">
-  <textarea bind:value={style} maxlength="1024"></textarea>
+  <textarea bind:value={style} maxlength="4096"></textarea>
 </div>
 <div class="bottom">
-  <div class="left">{formatBytes(style.length)} / 1KB</div>
+  <div class="left">{formatBytes(style.length)} / 4.0KB</div>
   <div class="right">
     <button on:click={closeThis}>Cancel</button>
     <button on:click={reset}>Discard</button>

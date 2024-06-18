@@ -63,7 +63,9 @@
   asks for your confirmation when performing elevated operations, like managing services, and
   stopping processes.
 </p>
-<p>We recommend leaving it on it's default settings for the best security.</p>
+<p class="recommendation">
+  We recommend leaving it on it's default settings for the best security.
+</p>
 <SettingsOption
   title="{$UserDataStore.sh.bypassElevation ? 'Re-enable' : 'Disable'} elevation"
   context={$UserDataStore.sh.bypassElevation

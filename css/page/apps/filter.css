@@ -37,7 +37,7 @@ div.state-SettingsApp-apps div.filter div.search-field {
   padding: 7px;
   background-color: var(--button-bg);
   height: 30px;
-  border-radius: 6px;
+  border-radius: var(--button-border-rad);
   flex-grow: 1;
 }
 
