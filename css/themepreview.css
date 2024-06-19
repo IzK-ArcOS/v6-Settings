@@ -15,4 +15,5 @@ div.theme-preview {
   align-items: end;
   position: relative;
   outline: 1px solid var(--button-bg);
+  image-rendering: pixelated;
 }
