@@ -11,6 +11,8 @@
   export let pid: number;
   export let runtime: Runtime;
 
+  const { isolated } = runtime;
+
   let state: State;
 
   onMount(() => {
@@ -19,8 +21,14 @@
 </script>
 
 {#if runtime && state}
-  <SideBar {runtime} />
-  <div class="content-wrapper settings-page-{state.key}" class:safemode={$SafeMode}>
+  {#if !$isolated}
+    <SideBar {runtime} />
+  {/if}
+  <div
+    class="content-wrapper settings-page-{state.key}"
+    class:isolated={$isolated}
+    class:safemode={$SafeMode}
+  >
     <Titlebar app={runtime.appMutator} {pid} showIcon={false} showTitle={false}>
       <h1 class="page-title">{state.name}</h1>
     </Titlebar>
