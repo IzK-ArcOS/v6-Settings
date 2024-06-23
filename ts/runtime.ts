@@ -46,5 +46,7 @@ export class Runtime extends AppRuntime {
     }
 
     spawnOverlay(overlay, this.process.pid, args);
+
+    return true;
   }
 }
