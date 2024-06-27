@@ -2,16 +2,18 @@ import { WarningIcon } from "$ts/images/dialog";
 import { TrashIcon } from "$ts/images/general";
 import { sendNotification } from "$ts/notif";
 import { createErrorDialog } from "$ts/process/error";
+import { WriteFileReturnCaptions } from "$ts/stores/filesystem/captions";
 import { deleteCustomTheme } from "$ts/themes";
+import { WriteFileReturnValue } from "$types/fs";
 
 /**
  * Tells the user that their theme couldn't be saved
  * @param name The theme name
  */
-export function FsThemeSaveFailed(name: string) {
+export function FsThemeSaveFailed(name: string, status: WriteFileReturnValue) {
   sendNotification({
     title: "Couldn't save theme",
-    message: `An error occured while saving ${name} to ArcFS. The file might already exist.`,
+    message: `Failed to save ${name} to ArcFS: ${WriteFileReturnCaptions[status]}`,
     image: WarningIcon,
   });
 }

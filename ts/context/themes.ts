@@ -39,7 +39,7 @@ export const ThemeContext: AppContextMenu = {
 
         const written = await writeFile(path, textToBlob(JSON.stringify(theme, null, 2)));
 
-        if (!written) FsThemeSaveFailed(name);
+        if (written != "success") FsThemeSaveFailed(name, written);
       },
     },
     SEP_ITEM,
@@ -86,7 +86,7 @@ export const ThemeContext: AppContextMenu = {
 
         const written = await writeFile(path, textToBlob(JSON.stringify(theme, null, 2)));
 
-        if (!written) FsThemeSaveFailed(name);
+        if (written != "success") FsThemeSaveFailed(name, written);
       },
     },
     SEP_ITEM,
