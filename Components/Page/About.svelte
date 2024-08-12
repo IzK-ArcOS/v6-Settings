@@ -20,9 +20,9 @@
 <GlowingLogo className="logo" />
 <h1>ArcOS <span class="colored">v6</span></h1>
 <p>
-  Thank you for using ArcOS! We're constantly working on improving it to give you the best
-  experience possible. Curious who works on ArcOS? Go ahead and visit our Frontend GitHub page, we
-  list our contributors there.
+  Thank you for using ArcOS! We used to work really hard to give you the best experience possible.
+  Curious who worked on ArcOS? Go ahead and visit our Frontend GitHub page, we list our contributors
+  there. Thank you for this amazing journey, and goodbye ArcOS.
   <br /><br />
   Want to contact us?
   <button class="link" on:click={contact}>Do so here</button>.
